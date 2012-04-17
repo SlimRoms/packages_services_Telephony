@@ -3199,6 +3199,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         return VoicemailNotificationSettingsUtil.isVibrationEnabled(phone);
     }
 
+
     @Override
     public byte[] getAtr(int subId) {
         if (Binder.getCallingUid() != Process.SYSTEM_UID) {
@@ -3215,5 +3216,8 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
             }
         }
         return result;
+
+    public int getLteOnGsmMode() {
+        return mPhone.getLteOnGsmMode();
     }
 }
