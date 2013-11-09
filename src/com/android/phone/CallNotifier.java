@@ -733,11 +733,11 @@ public class CallNotifier extends Handler
                 .enableNotificationAlerts(state == PhoneConstants.State.IDLE);
 
         Phone fgPhone = mCM.getFgPhone();
-        Call call = PhoneUtils.getCurrentCall(fgPhone);
+        Call fgCall = fgPhone.getForegroundCall();
         Connection c;
 
         if (fgPhone.getPhoneType() == PhoneConstants.PHONE_TYPE_CDMA) {
-            if ((fgPhone.getForegroundCall().getState() == Call.State.ACTIVE)
+            if ((fgCall.getState() == Call.State.ACTIVE)
                     && ((mPreviousCdmaCallState == Call.State.DIALING)
                     ||  (mPreviousCdmaCallState == Call.State.ALERTING))) {
                 if (mIsCdmaRedialCall) {
@@ -747,10 +747,10 @@ public class CallNotifier extends Handler
                 // Stop any signal info tone when call moves to ACTIVE state
                 stopSignalInfoTone();
             }
-            mPreviousCdmaCallState = fgPhone.getForegroundCall().getState();
-            c = call.getLatestConnection();
+            mPreviousCdmaCallState = fgCall.getState();
+            c = fgCall.getLatestConnection();
         } else {
-            c = call.getEarliestConnection();
+            c = fgCall.getEarliestConnection();
         }
 
         // Have the PhoneApp recompute its mShowBluetoothIndication
@@ -806,7 +806,7 @@ public class CallNotifier extends Handler
             if ((c != null) && (PhoneNumberUtils.isLocalEmergencyNumber(c.getAddress(),
                                                                         mApplication))) {
                 if (VDBG) log("onPhoneStateChanged: it is an emergency call.");
-                Call.State callState = fgPhone.getForegroundCall().getState();
+                Call.State callState = fgCall.getState();
                 if (mEmergencyTonePlayerVibrator == null) {
                     mEmergencyTonePlayerVibrator = new EmergencyTonePlayerVibrator();
                 }
