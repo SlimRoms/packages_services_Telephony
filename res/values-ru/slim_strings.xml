@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2013 SlimRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="mwi_notification_title">Индикатор непросмотренных сообщений</string>
+    <string name="mwi_notification_summary">Показывать индикатор непросмотренных сообщений голосовой почты</string>
+    <string name="call_notif_unconditionalCF">Активирована безусловная переадресация звонков</string>
+    <string name="call_notif_conditionalCF">Активирована условная переадресация звонков</string>
+    <string name="call_notif_MOcall_forwarding">Исходящий звонок переадресовывается</string>
+    <string name="call_notif_cugcall">Звонок в закрытую группу пользователей</string>
+    <string name="call_notif_outgoing_barred">Исходищие звонки игнорируются</string>
+    <string name="call_notif_incoming_barred">Входящие звонки блокируются оператором</string>
+    <string name="call_notif_clir_suppression_rejected">Подавление своего номера запрещено сетью</string>
+    <string name="call_notif_call_deflected">Звонок переадресован оператором</string>
+    <string name="call_notif_MTcall_forwarding">Входящий звонок переадресован</string>
+    <string name="call_notif_multipartycall">Групповой вызов</string>
+    <string name="call_notif_callonhold_released">Звонок прекращен Вашим абонентом</string>
+    <string name="call_notif_forwardcheckreceived">Звонок передаресован</string>
+    <string name="call_notif_callconnectingect">Звонок проходит через ЕСТ (explicit call transfer)</string>
+    <string name="call_notif_callconnectedect">Звонок подключен через ЕСТ (explicit call transfer)</string>
+    <string name="perm_change_mobile_network">Переключить сеть (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
+    <string name="vibrate_outgoing">Вибрировать при ответе</string>
+    <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
+    <string name="vibrate_hangup">Вибрировать при отбое</string>
+    <string name="vibrate_45">Вибрировать раз в минуту</string>
+    <string name="vibrate_45_sum">Вибрировать каждую 45ю секунду в течение исходящего звонка</string>
+    <string name="show_ssn_label">Уведомления о событиях</string>
+    <string name="show_ssn_summary">Показывать уведомления различных событий, связанных с сетью обработки вызовов</string>
+    <string name="blacklist_title">Черный список</string>
+    <string name="blacklist_summary_disabled">Отключено</string>
+    <string name="blacklist_summary">Входящие звонки с номеров, находящихся в черном списке, будут блокироваться</string>
+    <string name="blacklist_notification">Заблокирован звонок от %s</string>
+    <string name="blacklist_notification_private_number">Заблокирован вызов со скрытого номера</string>
+    <string name="blacklist_notification_list_private">Скрытый</string>
+    <string name="blacklist_notification_unknown_number">Заблокирован неизвестный номер %s</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> звонков заблокировано</string>
+    <string name="unblock_number">Разблокировать</string>
+
+    <string name="incall_vibration">Вибрация во время звонка</string>
+    <string name="preference_category_interface">Интерфейс</string>
+    <string name="non_intrusive_incall_title">Ненавязчиво</string>
+    <string name="non_intrusive_incall_summary">Использовать ненавязчивый диалог уведомления о входящем вызове</string>
+
+</resources>

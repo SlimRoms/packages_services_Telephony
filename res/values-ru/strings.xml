@@ -605,7 +605,7 @@
     <string name="description_delete_button" msgid="4015842181592283903">"возврат"</string>
     <string name="accessibility_speakerphone_enabled" msgid="1988512040421036359">"Громкая связь включена."</string>
     <string name="accessibility_call_muted" msgid="2776111226185342220">"Звук выключен."</string>
-    <string name="description_target_answer" msgid="7205604197797472471">"Правильный вариант"</string>
+    <string name="description_target_answer" msgid="7205604197797472471">"Принять вызов"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Отправить SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Отклонить"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Вибросигнал"</string>
@@ -617,4 +617,5 @@
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Звук клавиш"</string>
     <string name="dial_pad_autocomplete" msgid="494525952035761075">"Автозаполнение номера"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Рингтон и вибросигнал"</string>
+    <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A цикла прошло\nСледующий раз через <xliff:g id="used">%2$d</xliff:g> дней (<xliff:g id="used">%3$s</xliff:g>)</string>
 </resources>
