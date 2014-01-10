@@ -198,8 +198,6 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String SIP_SETTINGS_CATEGORY_KEY =
             "sip_settings_category_key";
 
-    private static final String BUTTON_NON_INTRUSIVE_INCALL_KEY = "button_non_intrusive_incall";
-
     private Intent mContactListIntent;
 
     /** Event for Async voicemail change call */
@@ -289,7 +287,6 @@ public class CallFeaturesSetting extends PreferenceActivity
     private CheckBoxPreference mVoicemailNotificationVibrate;
     private SipSharedPreferences mSipSharedPreferences;
     private PreferenceScreen mButtonBlacklist;
-    private CheckBoxPreference mNonIntrusiveInCall;
 
     private class VoiceMailProvider {
         public VoiceMailProvider(String name, Intent intent) {
@@ -545,10 +542,6 @@ public class CallFeaturesSetting extends PreferenceActivity
                 // This should let the preference use default behavior in the xml.
                 return false;
             }
-        } else if (preference == mNonIntrusiveInCall) {
-            Settings.System.putInt(getContentResolver(), Settings.System.NON_INTRUSIVE_INCALL,
-                    mNonIntrusiveInCall.isChecked() ? 1 : 0);
-            return true;
         }
         return false;
     }
@@ -1648,10 +1641,6 @@ public class CallFeaturesSetting extends PreferenceActivity
                 throw new IllegalStateException("Unexpected phone type: " + phoneType);
             }
         }
-
-        mNonIntrusiveInCall = (CheckBoxPreference) findPreference(BUTTON_NON_INTRUSIVE_INCALL_KEY);
-        mNonIntrusiveInCall.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.NON_INTRUSIVE_INCALL, 1) == 0 ? false : true);
 
         // create intent to bring up contact list
         mContactListIntent = new Intent(Intent.ACTION_GET_CONTENT);

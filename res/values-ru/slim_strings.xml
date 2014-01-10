@@ -51,8 +51,5 @@
     <string name="unblock_number">Разблокировать</string>
 
     <string name="incall_vibration">Вибрация во время звонка</string>
-    <string name="preference_category_interface">Интерфейс</string>
-    <string name="non_intrusive_incall_title">Ненавязчиво</string>
-    <string name="non_intrusive_incall_summary">Использовать ненавязчивый диалог уведомления о входящем вызове</string>
 
 </resources>

@@ -68,11 +68,6 @@
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> calls were blocked</string>
     <string name="unblock_number">Unblock</string>
 
-    <!-- Non-Intrusive InCall UI -->
-    <string name="preference_category_interface">Interfaz</string>
-    <string name="non_intrusive_incall_title">No intrusiva</string>
-    <string name="non_intrusive_incall_summary">Usar ventana no intrusiva para llamadas entrantes</string>
-
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
     <string name="mwi_notification_title">Indicador de mensaje de espera</string>
     <string name="mwi_notification_summary">Mostrar indicador de notificaciones de mensaje de voz en espera</string>

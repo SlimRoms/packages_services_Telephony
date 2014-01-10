@@ -68,11 +68,6 @@
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> hívások blokkolva</string>
     <string name="unblock_number">Feloldás</string>
 
-    <!-- Non-Intrusive InCall UI -->
-    <string name="preference_category_interface">Felület</string>
-    <string name="non_intrusive_incall_title">Nem tolakodó</string>
-    <string name="non_intrusive_incall_summary">Használj nem feltünő ablakot bejövő hívásnál</string>
-
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
     <string name="mwi_notification_title">Üzenet várakozási jelző</string>
     <string name="mwi_notification_summary">Mutassa a hangüzentre várakozási kijelzőt</string>
