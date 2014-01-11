@@ -50,6 +50,29 @@
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> звонков заблокировано</string>
     <string name="unblock_number">Разблокировать</string>
 
+    <!-- Call UI in background -->
+    <string name="bg_incall">Входящий звонок в фоне</string>
+    <string name="bg_incall_summary">Уведомлять о входящем звонке в фоновом режиме, когда экран включен, показывая уведомление и воспроизводя рингтон вызова</string>
+
     <string name="incall_vibration">Вибрация во время звонка</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот телефона</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Выбор действия\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Перевернув телефон экраном вниз, <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Values for flip action array entries -->
+    <string name="entry_do_nothing">Ничего не делать</string>
+    <string name="entry_mute_ringer">Выключить звонок</string>
+    <string name="entry_dismiss_call">Сбросить вызов</string>
+    <string name="summary_do_nothing">ничего не делать</string>
+    <string name="summary_mute_ringer">выключить звонок</string>
+    <string name="summary_dismiss_call">cбросить вызов</string>
+
+    <string name="personal_category">Личные настройки</string>
 
 </resources>
