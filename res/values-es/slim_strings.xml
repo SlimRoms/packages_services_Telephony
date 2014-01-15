@@ -65,8 +65,12 @@
     <string name="blacklist_notification_private_number">Se bloqueó una llamada de un número privado</string>
     <string name="blacklist_notification_list_private">Privado</string>
     <string name="blacklist_notification_unknown_number">Se bloqueó una llamada del número desconocido %s</string>
-    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> calls were blocked</string>
-    <string name="unblock_number">Unblock</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> llamadas bloqueadas</string>
+    <string name="unblock_number">Desbloquear</string>
+
+    <!-- Call UI in background -->
+    <string name="bg_incall">Llamada entrante en segundo plano</string>
+    <string name="bg_incall_summary">Mantiene la interfaz de llamada entrante en segundo plano cuando la pantalla está encendida, muestra una notificación y reproduce el tono de llamada</string>
 
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
     <string name="mwi_notification_title">Indicador de mensaje de espera</string>
@@ -75,5 +79,21 @@
     <!-- Permission for notification-bar network toggle -->
     <string name="perm_change_mobile_network">cambuar modo de red (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Permitir a la aplicación cambiar entre 2G y 3G en cualquier momento. 3G es más rápido pero consume más batería y puede ocasionar costes adicionales.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Acción al voltear</string>
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Acción al voltear...\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Voltear el teléfono <xliff:g id="action">%s</xliff:g></string>
+    <!-- Values for flip action array entries -->
+    <string name="entry_do_nothing">No hacer nada</string>
+    <string name="entry_mute_ringer">Silenciar el tono de llamada</string>
+    <string name="entry_dismiss_call">Desechar llamada</string>
+    <string name="summary_do_nothing">no hace nada</string>
+    <string name="summary_mute_ringer">silencia el tono de llamada</string>
+    <string name="summary_dismiss_call">desecha la llamada</string>
+    <string name="personal_category">Opciones personalizadas</string>
 
 </resources>
