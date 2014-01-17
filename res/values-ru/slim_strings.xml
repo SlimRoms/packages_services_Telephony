@@ -82,4 +82,8 @@
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">Не подключаться к службам передачи данных в национальном роуминге</string>
 
+    <!-- My Phone Number field -->
+    <string name="phone_number_label">Мой номер телефона</string>
+    <string name="phone_number_summary">Задать номер телефона для данного устройства</string>
+
 </resources>
