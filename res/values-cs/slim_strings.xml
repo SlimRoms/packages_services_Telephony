@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2013 SlimRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Nepodmíněné přesměrování hovorů aktivní</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Podmíněné přesměrování hovorů aktivní</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Příchozí hovory jsou přesměrovány</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Hovor v uzavřené skupině</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Odchozí hovory zamítnuty</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Příchozí hovory zamítnuty druhou stranou</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Skrytí vlastního čísla odmítnuto sítí</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Hovor přesměrován druhou stranou</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">Příchozí hovor přesměrován</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Konferenční hovor</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Hovor ukončen druhou stranou</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Hovor byl přesměrován</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Hovor bude spojen na přímo (ECT)</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Hovor je spojen na přímo (ECT)</string>
+
+    <!-- Advanced Settings -->
+    <string name="incall_vibration">Vibrace při hovoru</string>
+    <string name="vibrate_outgoing">Vibrovat při odpovědi</string>
+    <string name="vibrate_call_waiting">Vibrovat při dalším hovoru</string>
+    <string name="vibrate_hangup">Vibrovat po zavěšení</string>
+    <string name="vibrate_45">Vibrovat každou minutu</string>
+    <string name="vibrate_45_sum">Vibrovat při 45. sekundě každé minuty při odchozím volání</string>
+    <string name="show_ssn_label">Upozornění na událost</string>
+    <string name="show_ssn_summary">Zobrazit upozornění na různé události sítě, které souvisejí s hovory</string>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Černá listina</string>
+    <string name="blacklist_summary_disabled">Zakázána</string>
+    <string name="blacklist_summary">Příchozí hovory z čísel, která jsou na černé listině, jsou automaticky blokována</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">Blokovaný hovor z %s</string>
+    <string name="blacklist_notification_private_number">Blokovaný hovor ze skrytého čísla</string>
+    <string name="blacklist_notification_list_private">Skryté</string>
+    <string name="blacklist_notification_unknown_number">Blokované neznámé číslo %s</string>
+    <string name="blacklist_notification_multiple">Blokovaných hovorů: <xliff:g id="count">%d</xliff:g></string>
+    <string name="unblock_number">Odblokovat</string>
+
+    <!-- Call UI in background -->
+    <string name="bg_incall">Příchozí hovor v pozadí</string>
+    <string name="bg_incall_summary">Udržet UI příchozího hovoru v pozadí, zobrazit notifikace a přehrát vyzvánění</string>
+
+    <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
+    <string name="mwi_notification_title">Upozornění hlasové zprávy</string>
+    <string name="mwi_notification_summary">Zobrazit upozornění při přijetí hlasové zprávy</string>
+
+    <!-- Permission for notification-bar network toggle -->
+    <string name="perm_change_mobile_network">změnit typ sítě (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Umožňuje kdykoliv změnit typ datového připojení mezi 2G a 3G. Režim 3G je rychlejší, ale je náročnější na baterii a může být dražší.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Akce při otočení</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Otočením zařízení provést\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Otočením zařízení obrazovkou dolů se <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Values for flip action array entries -->
+    <string name="entry_do_nothing">Nedělat nic</string>
+    <string name="entry_mute_ringer">Ztišit vyzvánění</string>
+    <string name="entry_dismiss_call">Odmítnout hovor</string>
+    <string name="summary_do_nothing">nic nestane</string>
+    <string name="summary_mute_ringer">ztiší vyzvánění</string>
+    <string name="summary_dismiss_call">odmítne hovor</string>
+
+    <string name="personal_category">Osobní nastavení</string>
+
+    <!-- My Phone Number field -->
+    <string name="phone_number_label">Moje telefonní číslo</string>
+    <string name="phone_number_summary">Nastavení telefonního čísla pro toto zařízení</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Vnitrostátní datový roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Používat datové služby při vnitrostátním roamingu</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Nepoužívat datové služby při vnitrostátním roamingu</string>
+
+</resources>
