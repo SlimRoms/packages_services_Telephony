@@ -86,4 +86,7 @@
     <string name="phone_number_label">Мой номер телефона</string>
     <string name="phone_number_summary">Задать номер телефона для данного устройства</string>
 
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Шумоподавление</string>
+    <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
 </resources>
