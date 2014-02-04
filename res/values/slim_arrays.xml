@@ -38,4 +38,30 @@
         <item>@string/summary_do_nothing</item>
     </string-array>
 
+    <string-array translatable="false" name="forward_lookup_providers">
+        <item>Google</item>
+        <item>OpenStreetMap</item>
+    </string-array>
+
+    <string-array translatable="true" name="forward_lookup_provider_names">
+        <item>Google</item>
+        <item>OpenStreetMap</item>
+    </string-array>
+
+    <string-array translatable="false" name="reverse_lookup_providers">
+        <item>Google</item>
+        <item>OpenCnam</item>
+        <item>WhitePages</item>
+        <item>YellowPages</item>
+        <item>ZabaSearch</item>
+    </string-array>
+
+    <string-array translatable="true" name="reverse_lookup_provider_names">
+        <item>Google (Businesses)</item>
+        <item>OpenCnam (US)</item>
+        <item>WhitePages (US)</item>
+        <item>YellowPages (US)</item>
+        <item>ZabaSearch (US)</item>
+    </string-array>
+
 </resources>

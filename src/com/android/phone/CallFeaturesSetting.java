@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
@@ -50,6 +51,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -72,6 +74,8 @@ import com.android.internal.telephony.cdma.TtyIntent;
 import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.phone.sip.SipSharedPreferences;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -203,6 +207,15 @@ public class CallFeaturesSetting extends PreferenceActivity
 
     private static final String FLIP_ACTION_KEY = "flip_action";
 
+    private static final String SWITCH_ENABLE_FORWARD_LOOKUP =
+            "switch_enable_forward_lookup";
+    private static final String SWITCH_ENABLE_REVERSE_LOOKUP =
+            "switch_enable_reverse_lookup";
+    private static final String BUTTON_CHOOSE_FORWARD_LOOKUP_PROVIDER =
+            "button_choose_forward_lookup_provider";
+    private static final String BUTTON_CHOOSE_REVERSE_LOOKUP_PROVIDER =
+            "button_choose_reverse_lookup_provider";
+
     private Intent mContactListIntent;
 
     /** Event for Async voicemail change call */
@@ -295,6 +308,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     private SipSharedPreferences mSipSharedPreferences;
     private PreferenceScreen mButtonBlacklist;
     private ListPreference mFlipAction;
+    private SwitchPreference mEnableForwardLookup;
+    private SwitchPreference mEnableReverseLookup;
+    private ListPreference mChooseForwardLookupProvider;
+    private ListPreference mChooseReverseLookupProvider;
 
     private class VoiceMailProvider {
         public VoiceMailProvider(String name, Intent intent) {
@@ -634,6 +651,12 @@ public class CallFeaturesSetting extends PreferenceActivity
             Settings.System.putInt(getContentResolver(),
                 Settings.System.CALL_FLIP_ACTION_KEY, index);
             updateFlipActionSummary(index);
+        } else if (preference == mEnableForwardLookup
+                || preference == mEnableReverseLookup) {
+            saveLookupProviderSwitches(preference, (Boolean) objValue);
+        } else if (preference == mChooseForwardLookupProvider
+                || preference == mChooseReverseLookupProvider) {
+            saveLookupProviders(preference, (String) objValue);
         }
         // always let the preference setting proceed.
         return true;
@@ -1695,6 +1718,27 @@ public class CallFeaturesSetting extends PreferenceActivity
             }
         }
 
+        mEnableForwardLookup = (SwitchPreference)
+                findPreference(SWITCH_ENABLE_FORWARD_LOOKUP);
+        mEnableReverseLookup = (SwitchPreference)
+                findPreference(SWITCH_ENABLE_REVERSE_LOOKUP);
+
+        mEnableForwardLookup.setOnPreferenceChangeListener(this);
+        mEnableReverseLookup.setOnPreferenceChangeListener(this);
+
+        restoreLookupProviderSwitches();
+
+        mChooseForwardLookupProvider = (ListPreference)
+                findPreference(BUTTON_CHOOSE_FORWARD_LOOKUP_PROVIDER);
+        mChooseReverseLookupProvider = (ListPreference)
+                findPreference(BUTTON_CHOOSE_REVERSE_LOOKUP_PROVIDER);
+
+        mChooseForwardLookupProvider.setOnPreferenceChangeListener(this);
+        mChooseReverseLookupProvider.setOnPreferenceChangeListener(this);
+
+        initLookupProviders();
+        restoreLookupProviders();
+
         // create intent to bring up contact list
         mContactListIntent = new Intent(Intent.ACTION_GET_CONTENT);
         mContactListIntent.setType(android.provider.Contacts.Phones.CONTENT_ITEM_TYPE);
@@ -1911,6 +1955,9 @@ public class CallFeaturesSetting extends PreferenceActivity
 
         lookupRingtoneName();
         updateBlacklistSummary();
+
+        restoreLookupProviderSwitches();
+        restoreLookupProviders();
     }
 
     private void updateBlacklistSummary() {
@@ -2061,6 +2108,127 @@ public class CallFeaturesSetting extends PreferenceActivity
 
             mVoicemailNotificationVibrate.setEnabled(true);
         }
+    }
+
+    private void saveLookupProviderSwitches(Preference pref, Boolean newValue) {
+        if (DBG) log("saveLookupProviderSwitches()");
+
+        if (pref == mEnableForwardLookup) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ENABLE_FORWARD_LOOKUP,
+                    newValue ? 1 : 0);
+        } else if (pref == mEnableReverseLookup) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ENABLE_REVERSE_LOOKUP,
+                    newValue ? 1 : 0);
+        }
+    }
+
+    private void initLookupProviders() {
+        if (DBG) log("initLookupProviders()");
+
+        String[] fEntries = getApplicationContext().getResources()
+                .getStringArray(R.array.forward_lookup_provider_names);
+        String[] fEntryValues = getApplicationContext().getResources()
+                .getStringArray(R.array.forward_lookup_providers);
+
+        String[] rEntries = getApplicationContext().getResources()
+                .getStringArray(R.array.reverse_lookup_provider_names);
+        String[] rEntryValues = getApplicationContext().getResources()
+                .getStringArray(R.array.reverse_lookup_providers);
+
+        if (isGmsInstalled(getApplicationContext())) {
+            if (DBG) log("Google Play Services is NOT installed");
+
+            List<String> listRNames = new ArrayList<String>(
+                    Arrays.asList(rEntries));
+            List<String> listRValues = new ArrayList<String>(
+                    Arrays.asList(rEntryValues));
+
+            int index = listRValues.indexOf("Google");
+
+            if (index != -1) {
+                if (DBG) log("Removing Google from the reverse lookup providers");
+
+                listRNames.remove(index);
+                listRValues.remove(index);
+            }
+
+            rEntries = listRNames.toArray(new String[0]);
+            rEntryValues = listRValues.toArray(new String[0]);
+        }
+
+        mChooseReverseLookupProvider.setEntries(rEntries);
+        mChooseReverseLookupProvider.setEntryValues(rEntryValues);
+
+        mChooseForwardLookupProvider.setEntries(fEntries);
+        mChooseForwardLookupProvider.setEntryValues(fEntryValues);
+    }
+
+    private void restoreLookupProviderSwitches() {
+        if (DBG) log("restoreLookupProviderSwitches()");
+
+        mEnableForwardLookup.setChecked(Settings.System.getInt(
+                getContentResolver(),
+                Settings.System.ENABLE_FORWARD_LOOKUP, 1) != 0 ? true : false);
+        mEnableReverseLookup.setChecked(Settings.System.getInt(
+                getContentResolver(),
+                Settings.System.ENABLE_REVERSE_LOOKUP, 1) != 0 ? true : false);
+    }
+
+    private void restoreLookupProviders() {
+        if (DBG) log("restoreLookupProviders()");
+
+        String fProvider = Settings.System.getString(
+                getContentResolver(),
+                Settings.System.FORWARD_LOOKUP_PROVIDER);
+
+        if (fProvider == null) {
+            mChooseForwardLookupProvider.setValueIndex(0);
+            saveLookupProviders(mChooseForwardLookupProvider,
+                    (String) mChooseForwardLookupProvider.getEntryValues()[0]);
+        } else {
+            mChooseForwardLookupProvider.setValue(fProvider);
+        }
+
+        String rProvider = Settings.System.getString(
+                getContentResolver(),
+                Settings.System.REVERSE_LOOKUP_PROVIDER);
+
+        if (rProvider == null) {
+            mChooseReverseLookupProvider.setValueIndex(0);
+            saveLookupProviders(mChooseReverseLookupProvider,
+                    (String) mChooseReverseLookupProvider.getEntryValues()[0]);
+        } else {
+            mChooseReverseLookupProvider.setValue(rProvider);
+        }
+    }
+
+    private void saveLookupProviders(Preference pref, String newValue) {
+        if (DBG) log("saveLookupProviders()");
+
+        if (pref == mChooseForwardLookupProvider) {
+            Settings.System.putString(
+                    getContentResolver(),
+                    Settings.System.FORWARD_LOOKUP_PROVIDER,
+                    newValue);
+        } else if (pref == mChooseReverseLookupProvider) {
+            Settings.System.putString(
+                    getContentResolver(),
+                    Settings.System.REVERSE_LOOKUP_PROVIDER,
+                    newValue);
+        }
+    }
+
+    private static boolean isGmsInstalled(Context context) {
+        PackageManager pm = context.getPackageManager();
+        List<PackageInfo> packages = pm.getInstalledPackages(0);
+        for (PackageInfo info : packages) {
+            if (info.packageName.equals("com.google.android.gms")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
