@@ -89,4 +89,15 @@
     <!-- Noise suppression -->
     <string name="noise_suppression_title">Шумоподавление</string>
     <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
+
+    <!-- Number lookup -->
+    <string name="number_lookup">Поиск телефонного номера</string>
+    <string name="enable_forward_lookup_title">Включить прямой поиск</string>
+    <string name="enable_forward_lookup_summary">Показывать места поблизости при поиске в номеронабирателе</string>
+    <string name="enable_reverse_lookup_title">Включить обратный поиск</string>
+    <string name="enable_reverse_lookup_summary">Искать информацию о человеке/месте для незнакомых входящих номеров</string>
+    <string name="choose_lookup_providers">Выбрать поставщиков поиска</string>
+    <string name="choose_forward_lookup_provider_title">Выбрать поставщика прямого поиска</string>
+    <string name="choose_reverse_lookup_provider_title">Выбрать поставщика обратного поиска</string>
+
 </resources>
