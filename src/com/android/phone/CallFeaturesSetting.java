@@ -2137,7 +2137,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         String[] rEntryValues = getApplicationContext().getResources()
                 .getStringArray(R.array.reverse_lookup_providers);
 
-        if (isGmsInstalled(getApplicationContext())) {
+        if (!isGmsInstalled(getApplicationContext())) {
             if (DBG) log("Google Play Services is NOT installed");
 
             List<String> listRNames = new ArrayList<String>(
