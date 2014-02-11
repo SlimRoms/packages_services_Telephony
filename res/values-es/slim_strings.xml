@@ -96,4 +96,29 @@
     <string name="summary_dismiss_call">desecha la llamada</string>
     <string name="personal_category">Opciones personalizadas</string>
 
+    <!-- My Phone Number field -->
+    <string name="phone_number_label">Mi número de teléfono</string>
+    <string name="phone_number_summary">Establecer el número de teléfono para este dispositivo</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Roaming de datos nacional</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Conectar a servicios de datos en roaming nacional</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">No conectar a servicios de datos en roaming nacional</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Eliminación de ruido</string>
+    <string name="noise_suppression_summary">Habilitar elminación de ruido en las llamadas</string>
+
+    <!-- Number lookup -->
+    <string name="number_lookup">Búsqueda de números de teléfono</string>
+    <string name="enable_forward_lookup_title">Habilitar búsqueda</string>
+    <string name="enable_forward_lookup_summary">Muestra lugares cercanos cuando se busca en el marcador</string>
+    <string name="enable_reverse_lookup_title">Habilitar búsqueda inversa</string>
+    <string name="enable_reverse_lookup_summary">Buscar información de la persona o lugar cuando el remitente de la llamada es desconocido</string>
+    <string name="choose_lookup_providers">Seleccionar proveedores de búsquedas</string>
+    <string name="choose_forward_lookup_provider_title">Seleccionar proveedores de búsquedas</string>
+    <string name="choose_reverse_lookup_provider_title">Seleccionar proveedores de búsquedas inversas</string>
+
 </resources>
