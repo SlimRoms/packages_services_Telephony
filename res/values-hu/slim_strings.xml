@@ -97,7 +97,11 @@
     <string name="summary_mute_ringer">hívás némítás</string>
     <string name="summary_dismiss_call">hívás elutasítás</string>
 
-    <string name="personal_category">Személíes beállítások</string>
+    <string name="personal_category">Személyes beállítások</string>
+
+    <!-- My Phone Number field -->
+    <string name="phone_number_label">Saját telefonszám</string>
+    <string name="phone_number_summary">Telefonszám beállítása a készülékre</string>
 
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">Nemzetközi adat roaming</string>
@@ -105,6 +109,20 @@
     <string name="national_roaming_enable">Adatkapcsolat szolgáltatás nemzeközi roaming közben</string>
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">Ne használjon adatkapcsolatot nemzetközi roaming közben</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Zajcsökkentés</string>
+    <string name="noise_suppression_summary">Zajcsökkentés engedélyezése hívás közben</string>
+
+    <!-- Number lookup -->
+    <string name="number_lookup">Telefonszám keresése</string>
+    <string name="enable_forward_lookup_title">Címkeresés engedélyezése</string>
+    <string name="enable_forward_lookup_summary">Közeli helyek mutatása a tárcsázóban keresés közben</string>
+    <string name="enable_reverse_lookup_title">Fordított keresés engedélyezése</string>
+    <string name="enable_reverse_lookup_summary">Információ keresése személyekről vagy helyekről ismeretelen számoknál bejöbő hívásoknál</string>
+    <string name="choose_lookup_providers">Keresési szolgáltató választása</string>
+    <string name="choose_forward_lookup_provider_title">Címkeresési szolgáltató választása</string>
+    <string name="choose_reverse_lookup_provider_title">Visszakeresési szolgáltató választása</string>
 
 
 </resources>
