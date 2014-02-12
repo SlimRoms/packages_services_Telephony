@@ -54,6 +54,7 @@
         <item>WhitePages</item>
         <item>WhitePages_CA</item>
         <item>YellowPages</item>
+        <item>YellowPages_CA</item>
         <item>ZabaSearch</item>
     </string-array>
 
@@ -63,6 +64,7 @@
         <item>WhitePages (US)</item>
         <item>WhitePages (CA)</item>
         <item>YellowPages (US)</item>
+        <item>YellowPages (CA)</item>
         <item>ZabaSearch (US)</item>
     </string-array>
 
