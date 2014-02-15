@@ -2137,27 +2137,6 @@ public class CallFeaturesSetting extends PreferenceActivity
         String[] rEntryValues = getApplicationContext().getResources()
                 .getStringArray(R.array.reverse_lookup_providers);
 
-        if (!isGmsInstalled(getApplicationContext())) {
-            if (DBG) log("Google Play Services is NOT installed");
-
-            List<String> listRNames = new ArrayList<String>(
-                    Arrays.asList(rEntries));
-            List<String> listRValues = new ArrayList<String>(
-                    Arrays.asList(rEntryValues));
-
-            int index = listRValues.indexOf("Google");
-
-            if (index != -1) {
-                if (DBG) log("Removing Google from the reverse lookup providers");
-
-                listRNames.remove(index);
-                listRValues.remove(index);
-            }
-
-            rEntries = listRNames.toArray(new String[0]);
-            rEntryValues = listRValues.toArray(new String[0]);
-        }
-
         mChooseReverseLookupProvider.setEntries(rEntries);
         mChooseReverseLookupProvider.setEntryValues(rEntryValues);
 
@@ -2218,17 +2197,6 @@ public class CallFeaturesSetting extends PreferenceActivity
                     Settings.System.REVERSE_LOOKUP_PROVIDER,
                     newValue);
         }
-    }
-
-    private static boolean isGmsInstalled(Context context) {
-        PackageManager pm = context.getPackageManager();
-        List<PackageInfo> packages = pm.getInstalledPackages(0);
-        for (PackageInfo info : packages) {
-            if (info.packageName.equals("com.google.android.gms")) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

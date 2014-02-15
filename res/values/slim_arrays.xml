@@ -49,7 +49,6 @@
     </string-array>
 
     <string-array translatable="false" name="reverse_lookup_providers">
-        <item>Google</item>
         <item>OpenCnam</item>
         <item>WhitePages</item>
         <item>WhitePages_CA</item>
@@ -59,7 +58,6 @@
     </string-array>
 
     <string-array translatable="true" name="reverse_lookup_provider_names">
-        <item>Google (Businesses)</item>
         <item>OpenCnam (US)</item>
         <item>WhitePages (US)</item>
         <item>WhitePages (CA)</item>
