@@ -38,17 +38,25 @@
         <item>@string/summary_do_nothing</item>
     </string-array>
 
-    <string-array translatable="false" name="forward_lookup_providers">
+    <string-array name="forward_lookup_providers" translatable="false">
         <item>Google</item>
         <item>OpenStreetMap</item>
     </string-array>
 
-    <string-array translatable="true" name="forward_lookup_provider_names">
+    <string-array name="forward_lookup_provider_names" translatable="false">
         <item>Google</item>
         <item>OpenStreetMap</item>
     </string-array>
 
-    <string-array translatable="false" name="reverse_lookup_providers">
+    <string-array name="people_lookup_providers" translatable="false">
+        <item>WhitePages</item>
+    </string-array>
+
+    <string-array name="people_lookup_provider_names" translatable="false">
+        <item>WhitePages (US)</item>
+    </string-array>
+
+    <string-array name="reverse_lookup_providers" translatable="false">
         <item>OpenCnam</item>
         <item>WhitePages</item>
         <item>WhitePages_CA</item>
@@ -57,7 +65,7 @@
         <item>ZabaSearch</item>
     </string-array>
 
-    <string-array translatable="true" name="reverse_lookup_provider_names">
+    <string-array name="reverse_lookup_provider_names" translatable="false">
         <item>OpenCnam (US)</item>
         <item>WhitePages (US)</item>
         <item>WhitePages (CA)</item>
