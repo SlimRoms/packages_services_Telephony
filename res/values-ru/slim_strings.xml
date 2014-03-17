@@ -92,9 +92,11 @@
 
     <!-- Number lookup -->
     <string name="number_lookup">Поиск телефонного номера</string>
-    <string name="enable_forward_lookup_title">Включить прямой поиск</string>
+    <string name="enable_forward_lookup_title">Прямой поиск</string>
     <string name="enable_forward_lookup_summary">Показывать места поблизости при поиске в номеронабирателе</string>
-    <string name="enable_reverse_lookup_title">Включить обратный поиск</string>
+    <string name="enable_people_lookup_title">Поиск людей</string>
+    <string name="enable_people_lookup_summary">Показывать результаты онлайн для поиска людей через номеронабиратель</string>
+    <string name="enable_reverse_lookup_title">Обратный поиск</string>
     <string name="enable_reverse_lookup_summary">Искать информацию о человеке/месте для незнакомых входящих номеров</string>
     <string name="choose_lookup_providers">Выбрать поставщиков поиска</string>
     <string name="choose_forward_lookup_provider_title">Выбрать поставщика прямого поиска</string>
