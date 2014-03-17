@@ -114,11 +114,13 @@
     <!-- Number lookup -->
     <string name="number_lookup">Búsqueda de números de teléfono</string>
     <string name="enable_forward_lookup_title">Habilitar búsqueda</string>
+    <string name="enable_people_lookup_title">Búsqueda de personas</string>
     <string name="enable_forward_lookup_summary">Muestra lugares cercanos cuando se busca en el marcador</string>
     <string name="enable_reverse_lookup_title">Habilitar búsqueda inversa</string>
     <string name="enable_reverse_lookup_summary">Buscar información de la persona o lugar cuando el remitente de la llamada es desconocido</string>
     <string name="choose_lookup_providers">Seleccionar proveedores de búsquedas</string>
     <string name="choose_forward_lookup_provider_title">Seleccionar proveedores de búsquedas</string>
     <string name="choose_reverse_lookup_provider_title">Seleccionar proveedores de búsquedas inversas</string>
+    <string name="choose_people_lookup_provider_title">Seleccionar proveedor de búsqueda de personas</string>
 
 </resources>
