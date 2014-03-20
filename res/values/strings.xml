@@ -714,10 +714,10 @@
     <!-- Call settings, string that appears on FDN contact list when there are no contacts on the SIM. -->
     <string name="simContacts_empty">No contacts on your SIM card.</string>
     <!-- Call settings: title of the dialog that lets you select contacts from the SIM. -->
-    <string name="simContacts_title">Select contacts to import</string>
+    <string name="simContacts_title">Manage SIM card contacts</string>
     <!-- Appears when user tries to import contacts in SIM during Airplane mode
       [CHAR LIMIT=NONE] -->
-    <string name="simContacts_airplaneMode">To import contacts from the SIM card, first turn off Airplane mode.</string>
+    <string name="simContacts_airplaneMode">To manage contacts from the SIM card, first turn off Airplane mode.</string>
 
     <!-- SIM PIN strings -->
     <!-- Title of "Enable/disable SIM PIN" screen -->

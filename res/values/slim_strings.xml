@@ -127,4 +127,28 @@
     <string name="choose_people_lookup_provider_title">Choose people lookup provider</string>
     <string name="choose_reverse_lookup_provider_title">Choose reverse lookup provider</string>
 
+    <!-- Sim contacts management -->
+    <string name="exportContacts">Exporting contacts to SIM card\u2026</string>
+    <string name="ContactScreen">Add/Edit SIM Contact</string>
+    <string name="ExportContactScreen">Export phone contacts to sim </string>
+    <string name="addSimEntries">Add SIM Contact</string>
+    <string name="deleteAllSimEntries">Delete All SIM Contacts</string>
+    <string name="deleteSimContacts">Deleting SIM contacts</string>
+    <string name="editContact">Edit</string>
+    <string name="sendSms">Send SMS</string>
+    <string name="delete">Delete</string>
+    <string name="dial">Dial</string>
+    <string name="enterName">Enter Name:</string>
+    <string name="enterNumber">Enter Phone Number:</string>
+    <string name="contactAddSuccess">Succesfully added contact to SIM </string>
+    <string name="contactAddFailed">Failed to add contact to SIM !!!</string>
+    <string name="contactUpdateSuccess">Succesfully updated contact in SIM </string>
+    <string name="contactUpdateFailed">Failed to update contact in SIM !!!</string>
+    <string name="contactdeleteSuccess">Succesfully deleted contact from SIM </string>
+    <string name="contactdeleteFailed">Failed to delete contact from SIM !!!</string>
+    <string name="allContactdeleteSuccess">Succesfully deleted all contacts from SIM </string>
+    <string name="allContactdeleteFailed">Failed to delete all contacts from SIM !!!</string>
+    <string name="exportAllcontatsSuccess">Succesfully exported all contacts to SIM </string>
+    <string name="exportAllcontatsFailed">Failed to export all contacts to SIM !!!</string>
+    <string name="cursorError">Cursor is not having proper data !!! </string>
 </resources>
