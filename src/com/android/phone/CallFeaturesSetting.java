@@ -29,7 +29,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
@@ -73,8 +72,6 @@ import com.android.internal.telephony.cdma.TtyIntent;
 import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.phone.sip.SipSharedPreferences;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -659,11 +656,11 @@ public class CallFeaturesSetting extends PreferenceActivity
         } else if (preference == mEnableForwardLookup
                 || preference == mEnablePeopleLookup
                 || preference == mEnableReverseLookup) {
-            saveLookupProviderSwitches(preference, (Boolean) objValue);
+            saveLookupProviderSwitch(preference, (Boolean) objValue);
         } else if (preference == mChooseForwardLookupProvider
                 || preference == mChoosePeopleLookupProvider
                 || preference == mChooseReverseLookupProvider) {
-            saveLookupProviders(preference, (String) objValue);
+            saveLookupProviderSetting(preference, (String) objValue);
         }
         // always let the preference setting proceed.
         return true;
@@ -2122,22 +2119,22 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
     }
 
-    private void saveLookupProviderSwitches(Preference pref, Boolean newValue) {
-        if (DBG) log("saveLookupProviderSwitches()");
+    private void saveLookupProviderSwitch(Preference pref, Boolean newValue) {
+        if (DBG) log("saveLookupProviderSwitch()");
+
+        String key;
 
         if (pref == mEnableForwardLookup) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.ENABLE_FORWARD_LOOKUP,
-                    newValue ? 1 : 0);
+            key = Settings.System.ENABLE_FORWARD_LOOKUP;
         } else if (pref == mEnablePeopleLookup) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.ENABLE_PEOPLE_LOOKUP,
-                    newValue ? 1 : 0);
+            key = Settings.System.ENABLE_PEOPLE_LOOKUP;
         } else if (pref == mEnableReverseLookup) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.ENABLE_REVERSE_LOOKUP,
-                    newValue ? 1 : 0);
+            key = Settings.System.ENABLE_REVERSE_LOOKUP;
+        } else {
+            return;
         }
+
+        Settings.System.putInt(getContentResolver(), key, newValue ? 1 : 0);
     }
 
     private void restoreLookupProviderSwitches() {
@@ -2145,74 +2142,52 @@ public class CallFeaturesSetting extends PreferenceActivity
 
         mEnableForwardLookup.setChecked(Settings.System.getInt(
                 getContentResolver(),
-                Settings.System.ENABLE_FORWARD_LOOKUP, 1) != 0 ? true : false);
+                Settings.System.ENABLE_FORWARD_LOOKUP, 1) != 0);
         mEnablePeopleLookup.setChecked(Settings.System.getInt(
                 getContentResolver(),
-                Settings.System.ENABLE_PEOPLE_LOOKUP, 1) != 0 ? true : false);
+                Settings.System.ENABLE_PEOPLE_LOOKUP, 1) != 0);
         mEnableReverseLookup.setChecked(Settings.System.getInt(
                 getContentResolver(),
-                Settings.System.ENABLE_REVERSE_LOOKUP, 1) != 0 ? true : false);
+                Settings.System.ENABLE_REVERSE_LOOKUP, 1) != 0);
+    }
+
+    private void restoreLookupProvider(ListPreference pref, String key) {
+        String provider = Settings.System.getString(getContentResolver(), key);
+        if (provider == null) {
+            pref.setValueIndex(0);
+            saveLookupProviderSetting(pref, pref.getEntryValues()[0].toString());
+        } else {
+            pref.setValue(provider);
+        }
     }
 
     private void restoreLookupProviders() {
         if (DBG) log("restoreLookupProviders()");
 
-        String fProvider = Settings.System.getString(
-                getContentResolver(),
+        restoreLookupProvider(mChooseForwardLookupProvider,
                 Settings.System.FORWARD_LOOKUP_PROVIDER);
-
-        if (fProvider == null) {
-            mChooseForwardLookupProvider.setValueIndex(0);
-            saveLookupProviders(mChooseForwardLookupProvider,
-                    (String) mChooseForwardLookupProvider.getEntryValues()[0]);
-        } else {
-            mChooseForwardLookupProvider.setValue(fProvider);
-        }
-
-        String pProvider = Settings.System.getString(
-                getContentResolver(),
+        restoreLookupProvider(mChoosePeopleLookupProvider,
                 Settings.System.PEOPLE_LOOKUP_PROVIDER);
-
-        if (pProvider == null) {
-            mChoosePeopleLookupProvider.setValueIndex(0);
-            saveLookupProviders(mChoosePeopleLookupProvider,
-                    (String) mChoosePeopleLookupProvider.getEntryValues()[0]);
-        } else {
-            mChoosePeopleLookupProvider.setValue(pProvider);
-        }
-
-        String rProvider = Settings.System.getString(
-                getContentResolver(),
+        restoreLookupProvider(mChooseReverseLookupProvider,
                 Settings.System.REVERSE_LOOKUP_PROVIDER);
-
-        if (rProvider == null) {
-            mChooseReverseLookupProvider.setValueIndex(0);
-            saveLookupProviders(mChooseReverseLookupProvider,
-                    (String) mChooseReverseLookupProvider.getEntryValues()[0]);
-        } else {
-            mChooseReverseLookupProvider.setValue(rProvider);
-        }
     }
 
-    private void saveLookupProviders(Preference pref, String newValue) {
-        if (DBG) log("saveLookupProviders()");
+    private void saveLookupProviderSetting(Preference pref, String newValue) {
+        if (DBG) log("saveLookupProviderSetting()");
+
+        String key;
 
         if (pref == mChooseForwardLookupProvider) {
-            Settings.System.putString(
-                    getContentResolver(),
-                    Settings.System.FORWARD_LOOKUP_PROVIDER,
-                    newValue);
+            key = Settings.System.FORWARD_LOOKUP_PROVIDER;
         } else if (pref == mChoosePeopleLookupProvider) {
-            Settings.System.putString(
-                    getContentResolver(),
-                    Settings.System.PEOPLE_LOOKUP_PROVIDER,
-                    newValue);
+            key = Settings.System.PEOPLE_LOOKUP_PROVIDER;
         } else if (pref == mChooseReverseLookupProvider) {
-            Settings.System.putString(
-                    getContentResolver(),
-                    Settings.System.REVERSE_LOOKUP_PROVIDER,
-                    newValue);
+            key = Settings.System.REVERSE_LOOKUP_PROVIDER;
+        } else {
+            return;
         }
+
+        Settings.System.putString(getContentResolver(), key, newValue);
     }
 
     /**
