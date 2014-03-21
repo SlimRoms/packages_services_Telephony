@@ -118,10 +118,13 @@
     <string name="number_lookup">Telefonszám keresése</string>
     <string name="enable_forward_lookup_title">Címkeresés engedélyezése</string>
     <string name="enable_forward_lookup_summary">Közeli helyek mutatása a tárcsázóban keresés közben</string>
+    <string name="enable_people_lookup_title">Személyek kikeresése</string>
+    <string name="enable_people_lookup_summary">Mutassa az online elérhető személyeket a tárcsázóban keresés közben</string>
     <string name="enable_reverse_lookup_title">Fordított keresés engedélyezése</string>
     <string name="enable_reverse_lookup_summary">Információ keresése személyekről vagy helyekről ismeretelen számoknál bejöbő hívásoknál</string>
     <string name="choose_lookup_providers">Keresési szolgáltató választása</string>
     <string name="choose_forward_lookup_provider_title">Címkeresési szolgáltató választása</string>
+    <string name="choose_people_lookup_provider_title">Személy keresési szolgáltató választása</string>
     <string name="choose_reverse_lookup_provider_title">Visszakeresési szolgáltató választása</string>
 
 
