@@ -67,7 +67,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     private static final int CMD_ANSWER_RINGING_CALL = 4;
     private static final int CMD_END_CALL = 5;  // not used yet
     private static final int CMD_SILENCE_RINGER = 6;
-    private static final int MESSAGE_SET_PREFERRED_NETWORK_TYPE = 7;
+    private static final int CMD_TOGGLE_LTE = 7; // not used yet
 
     /** The singleton instance. */
     private static PhoneInterfaceManager sInstance;
@@ -301,39 +301,56 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         mApp.startActivity(intent);
     }
 
-    public void toggleLTE() {
+
+    private int getPreferredNetworkMode() {
         int preferredNetworkMode = RILConstants.PREFERRED_NETWORK_MODE;
-        if (TelephonyManager.getLteOnCdmaModeStatic() == PhoneConstants.LTE_ON_CDMA_TRUE) {
+        if (mPhone.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE) {
             preferredNetworkMode = Phone.NT_MODE_GLOBAL;
         }
         int network = Settings.Global.getInt(mPhone.getContext().getContentResolver(),
-                Settings.Global.PREFERRED_NETWORK_MODE, preferredNetworkMode);
+              Settings.Global.PREFERRED_NETWORK_MODE, preferredNetworkMode);
+        return network;
+    }
+
+    public void toggleLTE(boolean on) {
+        int network = getPreferredNetworkMode();
+        boolean isCdmaDevice = mPhone.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE;
+
         switch (network) {
-            case Phone.NT_MODE_WCDMA_PREF:
-                network = Phone.NT_MODE_LTE_GSM_WCDMA;
-                break;
-            case Phone.NT_MODE_LTE_GSM_WCDMA:
-                network = Phone.NT_MODE_WCDMA_PREF;
-                break;
-            case Phone.NT_MODE_GSM_UMTS:
-                network = Phone.NT_MODE_GLOBAL;
-                break;
-            case Phone.NT_MODE_GLOBAL:
-                network = Phone.NT_MODE_GSM_UMTS;
-                break;
-            case Phone.NT_MODE_CDMA:
-                network = Phone.NT_MODE_LTE_CDMA_AND_EVDO;
-                break;
-            case Phone.NT_MODE_LTE_CDMA_AND_EVDO:
+        // GSM Devices
+        case Phone.NT_MODE_WCDMA_PREF:
+        case Phone.NT_MODE_GSM_UMTS:
+            network = Phone.NT_MODE_LTE_GSM_WCDMA;
+            break;
+        case Phone.NT_MODE_LTE_GSM_WCDMA:
+            network = Phone.NT_MODE_WCDMA_PREF;
+            break;
+        // GSM and CDMA devices
+        case Phone.NT_MODE_GLOBAL:
+            // Wtf to do here?
+            network = Phone.NT_MODE_LTE_CMDA_EVDO_GSM_WCDMA;
+            break;
+        case Phone.NT_MODE_LTE_CMDA_EVDO_GSM_WCDMA:
+            // Determine the correct network type
+            if (isCdmaDevice) {
                 network = Phone.NT_MODE_CDMA;
-                break;
+            } else {
+                network = Phone.NT_MODE_WCDMA_PREF;
+            }
+            break;
+        // CDMA Devices
+        case Phone.NT_MODE_CDMA:
+            network = Phone.NT_MODE_LTE_CDMA_AND_EVDO;
+            break;
+        case Phone.NT_MODE_LTE_CDMA_AND_EVDO:
+            network = Phone.NT_MODE_CDMA;
+            break;
         }
-        Settings.Global.putInt(mPhone.getContext().getContentResolver(),
-                android.provider.Settings.Global.PREFERRED_NETWORK_MODE,
-                network);
-        mPhone.setPreferredNetworkType(network, mMainThreadHandler
-                .obtainMessage(MESSAGE_SET_PREFERRED_NETWORK_TYPE));
-        return;
+
+        mPhone.setPreferredNetworkType(network,
+                mMainThreadHandler.obtainMessage(CMD_TOGGLE_LTE));
+        android.provider.Settings.Global.putInt(mApp.getContentResolver(),
+                android.provider.Settings.Global.PREFERRED_NETWORK_MODE, network);
     }
 
     private boolean showCallScreenInternal(boolean specifyInitialDialpadState,
