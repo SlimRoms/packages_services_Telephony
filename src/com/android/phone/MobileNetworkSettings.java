@@ -101,6 +101,7 @@ public class MobileNetworkSettings extends PreferenceActivity
     private Preference mClickedPreference;
     private boolean mShow4GForLTE;
     private boolean mIsGlobalCdma;
+    private boolean mToroRIL;
 
     //This is a method implemented for DialogInterface.OnClickListener.
     //  Used to dismiss the dialogs when they come up.
@@ -251,6 +252,7 @@ public class MobileNetworkSettings extends PreferenceActivity
 
         boolean isLteOnCdma = mPhone.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE;
         mIsGlobalCdma = isLteOnCdma && getResources().getBoolean(R.bool.config_show_cdma);
+        mToroRIL = SystemProperties.getInt("ro.telephony.toroRIL", 0) == 1;
         if (getResources().getBoolean(R.bool.world_phone) == true) {
             prefSet.removePreference(mButtonEnabledNetworks);
             // set the listener for the mButtonPreferredNetworkMode list preference so we can issue
@@ -744,8 +746,13 @@ public class MobileNetworkSettings extends PreferenceActivity
                 break;
             case Phone.NT_MODE_LTE_CDMA_AND_EVDO:
             case Phone.NT_MODE_GLOBAL:
-                mButtonEnabledNetworks.setValue(
-                        Integer.toString(Phone.NT_MODE_LTE_CDMA_AND_EVDO));
+                if (mToroRIL) {
+                    mButtonEnabledNetworks.setValue(
+                            Integer.toString(Phone.NT_MODE_GLOBAL));
+                } else {
+                    mButtonEnabledNetworks.setValue(
+                            Integer.toString(Phone.NT_MODE_LTE_CDMA_AND_EVDO));
+                }
                 mButtonEnabledNetworks.setSummary(R.string.network_lte);
                 break;
             case Phone.NT_MODE_CDMA:
