@@ -102,4 +102,29 @@
     <string name="choose_forward_lookup_provider_title">Выбрать поставщика прямого поиска</string>
     <string name="choose_reverse_lookup_provider_title">Выбрать поставщика обратного поиска</string>
 
+    <!-- Sim contacts management -->
+    <string name="exportContacts">Контакты экспортируются на SIM-карту\u2026</string>
+    <string name="ContactScreen">Добавить/изменить контакт на SIM-карте</string>
+    <string name="ExportContactScreen">Экспортировать контакты на SIM-карту</string>
+    <string name="addSimEntries">Добавить контакт на SIM-карту</string>
+    <string name="deleteAllSimEntries">Удалить контакты с SIM-карты</string>
+    <string name="deleteSimContacts">Удаление контактов SIM-карты</string>
+    <string name="editContact">Изменить</string>
+    <string name="sendSms">Отправить SMS</string>
+    <string name="delete">Удалить</string>
+    <string name="dial">Позвонить</string>
+    <string name="enterName">Введите имя:</string>
+    <string name="enterNumber">Введите номер телефона:</string>
+    <string name="contactAddSuccess">Контакт добавлен на SIM-карту</string>
+    <string name="contactAddFailed">Контакт на SIM-карту не добавлен !</string>
+    <string name="contactUpdateSuccess">Контакт сохранен на SIM-карту</string>
+    <string name="contactUpdateFailed">Не удалось сохранить контакт на SIM-карте!</string>
+    <string name="contactdeleteSuccess">Контакт удален с SIM-карты </string>
+    <string name="contactdeleteFailed">Не удалось удалить контакт с SIM-карты!</string>
+    <string name="allContactdeleteSuccess">Все контакты удалены с SIM-карты </string>
+    <string name="allContactdeleteFailed">Невозможно удалить все контакты с SIM-карты!</string>
+    <string name="exportAllcontatsSuccess">Все контакты экспортированы на SIM-карту </string>
+    <string name="exportAllcontatsFailed">Невозможно экспортировать контакты на SIM-карту!</string>
+    <string name="cursorError">Неверные данные курсора!</string>
+
 </resources>

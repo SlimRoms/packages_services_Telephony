@@ -342,8 +342,8 @@
     <string name="fdn_failed" msgid="540018079008319747">"Не удалось включить FDN"</string>
     <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Считывание с SIM-карты…"</string>
     <string name="simContacts_empty" msgid="5270660846489561932">"На SIM-карте нет контактов."</string>
-    <string name="simContacts_title" msgid="1861472842524839921">"Выберите контакты для импорта"</string>
-    <string name="simContacts_airplaneMode" msgid="1846161429087789936">"Чтобы перенести контакты с SIM-карты, отключите режим полета."</string>
+    <string name="simContacts_title" msgid="1861472842524839921">"Действия с контактми на SIM-карте"</string>
+    <string name="simContacts_airplaneMode" msgid="1846161429087789936">"Чтобы изменить контакты SIM-карты, отключите режим полета."</string>
     <string name="enable_pin" msgid="5422767284133234860">"Включить/отключить запрос PIN SIM-карты"</string>
     <string name="change_pin" msgid="9174186126330785343">"Изменить PIN SIM-карты"</string>
     <string name="enter_pin_text" msgid="8532615714751931951">"PIN SIM-карты:"</string>
