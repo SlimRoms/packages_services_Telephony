@@ -370,6 +370,13 @@ public class PhoneInterfaceManager extends ITelephony.Stub implements CallModele
         case Phone.NT_MODE_LTE_CDMA_AND_EVDO:
             network = Phone.NT_MODE_CDMA;
             break;
+        // TD-SCDMA Devices
+        case Phone.NT_MODE_TD_SCDMA_GSM_WCDMA:
+            network = Phone.NT_MODE_TD_SCDMA_GSM_WCDMA_LTE;
+            break;
+        case Phone.NT_MODE_TD_SCDMA_GSM_WCDMA_LTE:
+            network = Phone.NT_MODE_TD_SCDMA_GSM_WCDMA;
+            break;
         }
 
         mPhone.setPreferredNetworkType(network,
