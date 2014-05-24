@@ -68,6 +68,10 @@
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> calls were blocked</string>
     <string name="unblock_number">Unblock</string>
 
+    <!-- Pulse torch with incoming call -->
+    <string name="torch_incoming_title">Pulse torch on incoming call</string>
+    <string name="torch_incoming_seekbar_title">Torch pulse rate</string>
+
     <!-- Call UI in background -->
     <string name="bg_incall">Incoming call in background</string>
     <string name="bg_incall_summary">Keep incoming call UI in background when screen is on, show notification and play ringtone only</string>

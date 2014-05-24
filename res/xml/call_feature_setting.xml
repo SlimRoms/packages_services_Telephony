@@ -34,6 +34,19 @@
             android:title="@string/vibrate_on_ring_title"
             android:persistent="false"
             android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="torch_pulse"
+            android:title="@string/torch_incoming_title"
+            android:persistent="false"
+            android:defaultValue="false" />
+
+        <SlimSeekBarPreference
+            android:key="torch_pulse_rate"
+            android:title="@string/torch_incoming_seekbar_title"
+            android:persistent="false"
+            android:dependency="torch_pulse" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
