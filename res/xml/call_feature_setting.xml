@@ -97,6 +97,13 @@
         android:defaultValue="false"
         android:summary="@string/bg_incall_summary"/>
 
+    <CheckBoxPreference
+        android:key="incall_glowpad_transparency"
+        android:title="@string/glow_bg_trans"
+        android:persistent="false"
+        android:defaultValue="false"
+        android:summary="@string/glow_bg_trans_summary"/>
+
     <PreferenceScreen
         android:key="button_respond_via_sms_key"
         android:title="@string/respond_via_sms_setting_title"
