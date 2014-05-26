@@ -127,4 +127,12 @@
     <string name="exportAllcontatsFailed">Невозможно экспортировать контакты на SIM-карту!</string>
     <string name="cursorError">Неверные данные курсора!</string>
 
+    <string name="preferred_network_mode_evdo_only">Только EvDo</string>
+    <string name="preferred_network_mode_cdma_without_evdo">CDMA без EvDo</string>
+    <string name="preferred_network_mode_cdma_evdo_auto">CDMA/EvDo авто</string>
+    <string name="preferred_network_mode_gsm_wcdma_auto">GSM/WCDMA авто</string>
+    <string name="preferred_network_mode_wcdma_only">Только WCDMA</string>
+    <string name="preferred_network_mode_gsm_only">Только GSM</string>
+    <string name="preferred_network_mode_gsm_wcdma_preferred">Предпочтительно GSM/WCDMA</string>
+
 </resources>
