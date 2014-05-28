@@ -68,9 +68,17 @@
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> llamadas bloqueadas</string>
     <string name="unblock_number">Desbloquear</string>
 
+    <!-- Pulse torch with incoming call -->
+    <string name="torch_incoming_title">Pulsación del flash en llamada entrante</string>
+    <string name="torch_incoming_seekbar_title">Duración de pulsación del flash</string>
+
     <!-- Call UI in background -->
     <string name="bg_incall">Llamada entrante en segundo plano</string>
     <string name="bg_incall_summary">Mantiene la interfaz de llamada entrante en segundo plano cuando la pantalla está encendida, muestra una notificación y reproduce el tono de llamada</string>
+
+    <!-- Incall Glowpad transparency -->
+    <string name="glow_bg_trans">Llamada entrante</string>
+    <string name="glow_bg_trans_summary">Fondo del panel de respuesta transparente al recibir llamadas para que la imágen del contacto se vea completa</string>
 
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
     <string name="mwi_notification_title">Indicador de mensaje de espera</string>
