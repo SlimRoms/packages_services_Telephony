@@ -51,7 +51,7 @@
     <string name="vibrate_call_waiting">Vibrate on call waiting</string>
     <string name="vibrate_hangup">Vibrate on hang up</string>
     <string name="vibrate_45">Vibrate every minute</string>
-    <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
+    <string name="vibrate_45_sum">Vibrates at the 45-second mark of every minute during outgoing calls</string>
     <string name="show_ssn_label">Event notification</string>
     <string name="show_ssn_summary">Show a notification for various network events related to call handling</string>
 
@@ -77,7 +77,7 @@
     <string name="bg_incall_summary">Keep incoming call UI in background when screen is on, show notification and play ringtone only</string>
 
     <!-- Incall Glowpad transparency -->
-    <string name="glow_bg_trans">Incoming call</string>
+    <string name="glow_bg_trans">Glowpad transparency</string>
     <string name="glow_bg_trans_summary">Make glowpad background transparent during incoming call so entire contact picture is visible</string>
 
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
