@@ -96,6 +96,14 @@
         android:defaultValue="true" />
 
     <ListPreference
+        android:key="dialkey_padding"
+        android:title="@string/dialkey_padding_title"
+        android:dialogTitle="@string/dialkey_padding_dialog_title"
+        android:entries="@array/dialkey_padding_setting_entries"
+        android:entryValues="@array/dialkey_padding_setting_values"
+        android:persistent="false" />
+
+    <ListPreference
         android:key="flip_action"
         android:title="@string/flip_action_title"
         android:dialogTitle="@string/flip_action_dialog_title"

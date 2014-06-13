@@ -16,6 +16,26 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Values for dialpad key padding. -->
+    <string-array name="dialkey_padding_setting_values" translatable="false">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <!-- Entries listed in the setting for dialkey padding. -->
+    <string-array name="dialkey_padding_setting_entries">
+        <item>@string/entry_0dip</item>
+        <item>@string/entry_5dip</item>
+        <item>@string/entry_10dip</item>
+        <item>@string/entry_15dip</item>
+        <item>@string/entry_20dip</item>
+        <item>@string/entry_25dip</item>
+    </string-array>
+
     <!-- Values for the flip action settings. -->
     <string-array name="flip_action_setting_values" translatable="false">
         <item>0</item>
