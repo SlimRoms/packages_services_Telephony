@@ -77,7 +77,7 @@
     <string name="bg_incall_summary">Mantiene la interfaz de llamada entrante en segundo plano cuando la pantalla está encendida, muestra una notificación y reproduce el tono de llamada</string>
 
     <!-- Incall Glowpad transparency -->
-    <string name="glow_bg_trans">Llamada entrante</string>
+    <string name="glow_bg_trans">Estilo de llamada entrante</string>
     <string name="glow_bg_trans_summary">Fondo del panel de respuesta transparente al recibir llamadas para que la imágen del contacto se vea completa</string>
 
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
