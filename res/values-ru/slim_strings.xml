@@ -144,4 +144,13 @@
     <string name="preferred_network_mode_gsm_only">Только GSM</string>
     <string name="preferred_network_mode_gsm_wcdma_preferred">Предпочтительно GSM/WCDMA</string>
 
+    <!-- Setting title for dialpad key padding. -->
+    <string name="dialkey_padding_title">Подсветка кнопок номеронабирателя</string>
+
+    <!-- Dialog title of the dialpad key padding setting. -->
+    <string name="dialkey_padding_dialog_title">Подветка кнопок номеронабирателя</string>
+
+    <!-- Setting summary for the dialpad key padding setting. -->
+    <string name="dialkey_padding_summary">Размер подсветки нажатой кнопки номеронабирателя сверху и снизу</string>
+
 </resources>
