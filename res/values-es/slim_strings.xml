@@ -88,6 +88,9 @@
     <string name="perm_change_mobile_network">cambuar modo de red (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Permitir a la aplicación cambiar entre 2G y 3G en cualquier momento. 3G es más rápido pero consume más batería y puede ocasionar costes adicionales.</string>
 
+    <!-- Setting title for dialpad key padding. -->
+    <string name="dialkey_padding_title">Separación de teclas del marcador</string>
+
     <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Acción al voltear</string>
     <!-- Dialog title of the flip action setting. -->
