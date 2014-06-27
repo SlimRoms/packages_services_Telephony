@@ -143,6 +143,8 @@
     <string name="preferred_network_mode_wcdma_only">Только WCDMA</string>
     <string name="preferred_network_mode_gsm_only">Только GSM</string>
     <string name="preferred_network_mode_gsm_wcdma_preferred">Предпочтительно GSM/WCDMA</string>
+    <string name="preferred_network_mode_td_scdma_only">Только TD-SCDMA</string>
+    <string name="preferred_network_mode_global">Глобальный</string>
 
     <!-- Setting title for dialpad key padding. -->
     <string name="dialkey_padding_title">Вертикальное расстояние между кнопками</string>
