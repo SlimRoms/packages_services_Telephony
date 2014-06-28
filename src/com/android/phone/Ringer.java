@@ -38,7 +38,6 @@ import android.provider.Settings;
 import android.util.Log;
 
 import com.android.internal.util.slim.DeviceUtils;
-import com.android.internal.util.slim.QuietHoursHelper;
 import com.android.internal.util.slim.TorchConstants;
 import com.android.internal.telephony.Phone;
 /**
@@ -164,6 +163,14 @@ public class Ringer {
         if (DBG) log("ring()...");
 
         synchronized (this) {
+            if (Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.QUIET_HOURS_RINGER, 0) == 2) {
+                // Quiet hours ringer setting is enabled,
+                // Skip all calculations and return without ringing
+                // or vibrating in any way.
+                return;
+            }
+
             try {
                 if (mBluetoothManager.showBluetoothIndication()) {
                     mPowerManager.setAttentionLight(true, 0x000000ff);
@@ -181,13 +188,9 @@ public class Ringer {
                 mVibratorThread.start();
             }
 
-            final boolean inQuietHours = QuietHoursHelper.inQuietHours(
-                    mContext, Settings.System.QUIET_HOURS_RINGER);
-
             if (Settings.System.getInt(mContext.getContentResolver(),
                     Settings.System.TORCH_WHILE_RINGING, 0) == 1
-                    && DeviceUtils.deviceSupportsTorch(mContext)
-                    && !inQuietHours) {
+                    && DeviceUtils.deviceSupportsTorch(mContext)) {
                 mWeStartedTorch = true;
                 Intent intent = new Intent(TorchConstants.ACTION_ON);
                 intent.putExtra(TorchConstants.STROBE_MODE, true);
@@ -200,8 +203,7 @@ public class Ringer {
             }
 
             int ringerVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
-            if (ringerVolume == 0 && mRingerVolumeSetting <= 0
-                || inQuietHours) {
+            if (ringerVolume == 0 && mRingerVolumeSetting <= 0) {
                 if (DBG) log("skipping ring because volume is zero");
                 return;
             }
