@@ -74,11 +74,13 @@
 
     <!-- Call UI in background -->
     <string name="bg_incall">Incoming call in background</string>
-    <string name="bg_incall_summary">Keep incoming call UI in background when screen is on, show notification and play ringtone only</string>
+    <string name="bg_incall_summary">Keep incoming call UI in background when screen is on, show notification and play ringtone only.</string>
+    <string name="bg_incall_as_heads_up">Show as heads up</string>
+    <string name="bg_incall_as_heads_up_summary">Show incoming call in background notification as heads up.</string>
 
     <!-- Incall Glowpad transparency -->
     <string name="glow_bg_trans">Glowpad transparency</string>
-    <string name="glow_bg_trans_summary">Make glowpad background transparent during incoming call so entire contact picture is visible</string>
+    <string name="glow_bg_trans_summary">Make glowpad background transparent during incoming call so entire contact picture is visible.</string>
 
     <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
     <string name="mwi_notification_title">Message wait indicator</string>

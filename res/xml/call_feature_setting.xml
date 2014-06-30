@@ -115,8 +115,16 @@
         android:key="bg_incall_screen"
         android:title="@string/bg_incall"
         android:persistent="false"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:summary="@string/bg_incall_summary"/>
+
+    <CheckBoxPreference
+        android:key="bg_incall_screen_as_heads_up"
+        android:title="@string/bg_incall_as_heads_up"
+        android:persistent="false"
+        android:defaultValue="true"
+        android:dependency="bg_incall_screen"
+        android:summary="@string/bg_incall_as_heads_up_summary"/>
 
     <CheckBoxPreference
         android:key="incall_glowpad_transparency"
