@@ -57,10 +57,12 @@
     <!-- Call UI in background -->
     <string name="bg_incall">Входящий звонок в фоне</string>
     <string name="bg_incall_summary">Уведомлять о входящем звонке в фоновом режиме, когда экран включен, показывая уведомление и воспроизводя рингтон вызова</string>
+    <string name="bg_incall_as_heads_up">Показывать, как уведомление \"поверх\"</string>
+    <string name="bg_incall_as_heads_up_summary">Показывать входящий звонок, как фоновое уведомление \"поверх\".</string>
 
     <!-- Incall Glowpad transparency -->
     <string name="glow_bg_trans">Прозрачный фон</string>
-    <string name="glow_bg_trans_summary">Делать фон экрана прозрачным при входящем вызове, чтобы видеть фото контакта целиком</string>
+    <string name="glow_bg_trans_summary">Делать фон экрана прозрачным при входящем вызове, чтобы видеть фото контакта целиком.</string>
 
     <string name="incall_vibration">Вибрация во время звонка</string>
 
