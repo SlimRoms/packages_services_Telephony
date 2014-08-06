@@ -180,22 +180,8 @@
     <string name="cursorError">Il cursore non ha i dati corretti!</string>
 
     <!-- Mobile network settings, preferred network mode -->
-    <string name="preferred_network_mode_td_scdma_lte_cdma_evdo_gsm_wcdma" translatable="false">TD-SCDMA/LTE/CDMA/EvDo/GSM/WCDMA</string>
-    <string name="preferred_network_mode_td_scdma_cdma_evdo_gsm_wcdma" translatable="false">TD-SCDMA/CDMA/EvDo/GSM/WCDMA</string>
-    <string name="preferred_network_mode_td_scdma_gsm_wcdma_lte" translatable="false">TD-SCDMA/GSM/WCDMA/LTE</string>
-    <string name="preferred_network_mode_td_scdma_wcdma_lte" translatable="false">TD-SCDMA/WCDMA/LTE</string>
-    <string name="preferred_network_mode_td_scdma_gsm_wcdma" translatable="false">TD-SCDMA/GSM/WCDMA</string>
-    <string name="preferred_network_mode_td_scdma_gsm_lte" translatable="false">TD-SCDMA/GSM/LTE</string>
-    <string name="preferred_network_mode_td_scdma_gsm" translatable="false">TD-SCDMA/GSM</string>
-    <string name="preferred_network_mode_td_scdma_lte" translatable="false">TD-SCDMA/LTE</string>
-    <string name="preferred_network_mode_td_scdma_wcdma" translatable="false">TD-SCDMA/WCDMA</string>
     <string name="preferred_network_mode_td_scdma_only">solo TD-SCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma" translatable="false">LTE/WCDMA</string>
-    <string name="preferred_network_mode_lte" translatable="false">LTE</string>
     <string name="preferred_network_mode_global">Globale</string>
-    <string name="preferred_network_mode_gsm_wcdma_lte" translatable="false">GSM/WCDMA/LTE</string>
-    <string name="preferred_network_mode_cdma_lte_evdo" translatable="false">CDMA + LTE/EvDo</string>
-    <string name="preferred_network_mode_cdma_evdo_gsm_wcdma" translatable="false">CDMA/EvDo/GSM/WCDMA</string>
     <string name="preferred_network_mode_evdo_only">solo EvDo</string>
     <string name="preferred_network_mode_cdma_without_evdo">CDMA senza EvDo</string>
     <string name="preferred_network_mode_cdma_evdo_auto">CDMA/EvDo auto</string>
@@ -203,16 +189,5 @@
     <string name="preferred_network_mode_wcdma_only">solo WCDMA</string>
     <string name="preferred_network_mode_gsm_only">solo GSM</string>
     <string name="preferred_network_mode_gsm_wcdma_preferred">preferisci GSM/WCDMA</string>
-
-    <!-- TD-SCDMA uses a variation of the GSM combos -->
-    <string-array name="enabled_networks_tdscdma_values" translatable="false">
-        <item>"20"</item>
-        <item>"18"</item>
-        <item>"1"</item>
-    </string-array>
-    <string-array name="enabled_networks_tdscdma_except_lte_values" translatable="false">
-        <item>"18"</item>
-        <item>"1"</item>
-    </string-array>
 
 </resources>
