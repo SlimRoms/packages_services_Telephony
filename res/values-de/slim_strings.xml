@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2013 SlimRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Sofortige Rufweiterleitung aktiviert</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Bedingte Rufweiterleitung aktiviert</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Ausgehender Anruf wird weitergeleitet</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Anruf in geschlossener Benutzergruppe</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Ausgehende Anrufe gesperrt</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Eingehende Anrufe bei anderem Teilnehmer gesperrt</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Rufnummerunterdrückung abgelehnt</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Anruf an anderen Teilnehmer weitergeleitet</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">Eingehender Anruf wird weitergeleitet</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Konferenzgespräch</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Anruf wieder aufgenommen</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Anruf wurde weitergeleitet</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Externe Anrufverbindung herstellen</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Externer Anruf hergestellt</string>
+
+    <!-- Advanced Settings -->
+    <string name="incall_vibration">Vibrationseinstellungen</string>
+    <string name="vibrate_outgoing">Beim Antworten vibrieren</string>
+    <string name="vibrate_call_waiting">Beim Halten vibrieren</string>
+    <string name="vibrate_hangup">Beim Auflegen vibrieren</string>
+    <string name="vibrate_45">Jede Minute vibrieren</string>
+    <string name="vibrate_45_sum">Vibriere 15 Sekunde vor Ende jeder vollen Minute während eines ausgehenden Anrufes</string>
+    <string name="show_ssn_label">Ereignis Benachrichtigung</string>
+    <string name="show_ssn_summary">Zeige eine Benachrichtigung für verschiednene Netzwerkereignisse</string>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Blacklist</string>
+    <string name="blacklist_summary_disabled">Deaktiviert</string>
+    <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Blacklist sind, werden abgewiesen</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">Abgewiesener Anruf von %s</string>
+    <string name="blacklist_notification_private_number">Abgewiesener Anruf einer unterdrückten Nummer</string>
+    <string name="blacklist_notification_list_private">Private</string>
+    <string name="blacklist_notification_unknown_number">Unbekannte Nummer abgewiesen %s</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> Anrufe wurden abgewiesen</string>
+    <string name="unblock_number">Aufheben</string>
+
+    <!-- Pulse torch with incoming call -->
+    <string name="torch_incoming_title">Taschenlampe pulsieren bei eingehendem Anruf</string>
+    <string name="torch_incoming_seekbar_title">Wiederholfrequenz</string>
+
+    <!-- Call UI in background -->
+    <string name="bg_incall">Eingehender Anruf im Hintergrund</string>
+    <string name="bg_incall_summary">Behält Anruf-Dialog im Hintergrund wenn der Bildschirm an ist, zeige nur eine Benachrichtigung und spielt den Klingelton ab.</string>
+    <string name="bg_incall_as_heads_up">Zeige als Heads-Up</string>
+    <string name="bg_incall_as_heads_up_summary">Zeigt die Hintergrundbenachrichtigung als Heads-Up.</string>
+
+    <!-- Incall Glowpad transparency -->
+    <string name="glow_bg_trans">Wählfeld-Transparenz</string>
+    <string name="glow_bg_trans_summary">Macht das Wählfeld während eines eingehenden Anrufes transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
+
+    <!-- Sprint MWI Quirk: Phantom message wait indicator workaround -->
+    <string name="mwi_notification_title">Message wait indicator</string>
+    <string name="mwi_notification_summary">Show message wait indicator voicemail notifications</string>
+
+    <!-- Permission for notification-bar network toggle -->
+    <string name="perm_change_mobile_network">Ändere Netzwerkmodus (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Erlaubt einer App, zu jeder Zeit zwischen 2G und 3G zu wechseln. 3G ist schneller, aber verbraucht mehr Akku und verursacht eventuell Zusatzkosten.</string>
+
+    <!-- Setting title for dialpad key padding. -->
+    <string name="dialkey_padding_title">Wählfeldtastenabstand</string>
+
+    <!-- Dialog title of the dialpad key padding setting. -->
+    <string name="dialkey_padding_dialog_title">Tastenabstand für Wählfeld</string>
+
+    <!-- Setting summary for the dialpad key padding setting. -->
+    <string name="dialkey_padding_summary">Größe des oberen und unteren Abstands der Nummerntasten</string>
+
+    <!-- Values for dialpad key padding array entries. -->
+    <string name="entry_0dip">0dip</string>
+    <string name="entry_5dip">5dip</string>
+    <string name="entry_10dip">10dip</string>
+    <string name="entry_15dip">15dip</string>
+    <string name="entry_20dip">20dip</string>
+    <string name="entry_25dip">25dip</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Umdreh-Aktion</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Drehe Gerät um\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Beim Umdrehen des Telefons wird <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Values for flip action array entries -->
+    <string name="entry_do_nothing">Nichts machen</string>
+    <string name="entry_mute_ringer">Ton stummschalten</string>
+    <string name="entry_dismiss_call">Anruf abweisen</string>
+    <string name="summary_do_nothing">nichts gemacht</string>
+    <string name="summary_mute_ringer">der Ton stummgeschalten</string>
+    <string name="summary_dismiss_call">der Anruf abgewiesen</string>
+
+    <string name="personal_category">Benutzereinstellungen</string>
+
+    <!-- My Phone Number field -->
+    <string name="phone_number_label">Meine Telefonnummer</string>
+    <string name="phone_number_summary">Telefonnummer für dieses Gerät</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">National Daten-Roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Daten-Verbindung herstellen bei National Daten-Roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Keine Daten-Verbindung herstellen bei National Daten-Roaming</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Rauschunterdrückung</string>
+    <string name="noise_suppression_summary">Aktiviert Rauschunterdrückung für Anrufe</string>
+
+    <!-- Number lookup -->
+    <string name="number_lookup">Telefonnummernsuche</string>
+    <string name="enable_forward_lookup_title">Vorwärtssuche</string>
+    <string name="enable_forward_lookup_summary">Zeigt nahegelegene Orte während der Nummerneingabe</string>
+    <string name="enable_people_lookup_title">Personensuche</string>
+    <string name="enable_people_lookup_summary">Zeigt öffentliche Einträge von Personen während der Nummerneingabe</string>
+    <string name="enable_reverse_lookup_title">Rückwärtssuche</string>
+    <string name="enable_reverse_lookup_summary">Sucht bei eingehenden Anrufen von unbekannten Nummern Informationen von Personen oder Orten</string>
+    <string name="choose_lookup_providers">Suchanbieter auswählen</string>
+    <string name="choose_forward_lookup_provider_title">Anbieter für Vorwärtssuche</string>
+    <string name="choose_people_lookup_provider_title">Anbieter für Personensuche</string>
+    <string name="choose_reverse_lookup_provider_title">Anbieter für Rückwärtssuche</string>
+
+    <!-- Sim contacts management -->
+    <string name="exportContacts">Exportiere Kontake auf die SIM Karte\u2026</string>
+    <string name="ContactScreen">Hinzufügen/Ändern des SIM Kontakts</string>
+    <string name="ExportContactScreen">Exportiere Telefonkontakte auf die SIM</string>
+    <string name="addSimEntries">Hinzufügen auf SIM</string>
+    <string name="deleteAllSimEntries">Lösche alle SIM Einträge</string>
+    <string name="deleteSimContacts">Lösche SIM Kontakte</string>
+    <string name="editContact">Ändern</string>
+    <string name="sendSms">Sende SMS</string>
+    <string name="delete">Löschen</string>
+    <string name="dial">Wählen</string>
+    <string name="enterName">Name eingeben:</string>
+    <string name="enterNumber">Telefonnummer eingeben:</string>
+    <string name="contactAddSuccess">Kontakt erfolgreich auf SIM hinzugefügt</string>
+    <string name="contactAddFailed">Kontakt auf SIM hinzufügen fehlgeschlagen !!!</string>
+    <string name="contactUpdateSuccess">Kontakt erfolgreich auf SIM aktualisiert</string>
+    <string name="contactUpdateFailed">Kontakt auf SIM aktualisieren fehlgeschlagen !!!</string>
+    <string name="contactdeleteSuccess">Kontakt erfolgreich von SIM gelöscht</string>
+    <string name="contactdeleteFailed">Kontakt von SIM löschen fehlgeschlagen !!!</string>
+    <string name="allContactdeleteSuccess">Alle Kontakt erfolgreich von SIM gelöscht</string>
+    <string name="allContactdeleteFailed">Alle Kontakt von SIM löschen fehlgeschlagen !!!</string>
+    <string name="exportAllcontatsSuccess">Alle Kontakte erfolgreich auf SIM exportiert</string>
+    <string name="exportAllcontatsFailed">Alle Kontakt auf SIM exportieren fehlgeschlagen !!!</string>
+    <string name="cursorError">Ungültige Eingabe !!! </string>
+
+    <!-- Mobile network settings, preferred network mode -->
+    <string name="preferred_network_mode_td_scdma_lte_cdma_evdo_gsm_wcdma" translatable="false">TD-SCDMA/LTE/CDMA/EvDo/GSM/WCDMA</string>
+    <string name="preferred_network_mode_td_scdma_cdma_evdo_gsm_wcdma" translatable="false">TD-SCDMA/CDMA/EvDo/GSM/WCDMA</string>
+    <string name="preferred_network_mode_td_scdma_gsm_wcdma_lte" translatable="false">TD-SCDMA/GSM/WCDMA/LTE</string>
+    <string name="preferred_network_mode_td_scdma_wcdma_lte" translatable="false">TD-SCDMA/WCDMA/LTE</string>
+    <string name="preferred_network_mode_td_scdma_gsm_wcdma" translatable="false">TD-SCDMA/GSM/WCDMA</string>
+    <string name="preferred_network_mode_td_scdma_gsm_lte" translatable="false">TD-SCDMA/GSM/LTE</string>
+    <string name="preferred_network_mode_td_scdma_gsm" translatable="false">TD-SCDMA/GSM</string>
+    <string name="preferred_network_mode_td_scdma_lte" translatable="false">TD-SCDMA/LTE</string>
+    <string name="preferred_network_mode_td_scdma_wcdma" translatable="false">TD-SCDMA/WCDMA</string>
+    <string name="preferred_network_mode_td_scdma_only">nur TD-SCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma" translatable="false">LTE/WCDMA</string>
+    <string name="preferred_network_mode_lte" translatable="false">LTE</string>
+    <string name="preferred_network_mode_global">Global</string>
+    <string name="preferred_network_mode_gsm_wcdma_lte" translatable="false">GSM/WCDMA/LTE</string>
+    <string name="preferred_network_mode_cdma_lte_evdo" translatable="false">CDMA + LTE/EvDo</string>
+    <string name="preferred_network_mode_cdma_evdo_gsm_wcdma" translatable="false">CDMA/EvDo/GSM/WCDMA</string>
+    <string name="preferred_network_mode_evdo_only">nur EvDo</string>
+    <string name="preferred_network_mode_cdma_without_evdo">CDMA ohne EvDo</string>
+    <string name="preferred_network_mode_cdma_evdo_auto">CDMA/EvDo auto</string>
+    <string name="preferred_network_mode_gsm_wcdma_auto">GSM/WCDMA auto</string>
+    <string name="preferred_network_mode_wcdma_only">nur WCDMA</string>
+    <string name="preferred_network_mode_gsm_only">nur GSM</string>
+    <string name="preferred_network_mode_gsm_wcdma_preferred">GSM/WCDMA bevorzugt</string>
+
+    <!-- TD-SCDMA uses a variation of the GSM combos -->
+    <string-array name="enabled_networks_tdscdma_values" translatable="false">
+        <item>"20"</item>
+        <item>"18"</item>
+        <item>"1"</item>
+    </string-array>
+    <string-array name="enabled_networks_tdscdma_except_lte_values" translatable="false">
+        <item>"18"</item>
+        <item>"1"</item>
+    </string-array>
+
+</resources>
