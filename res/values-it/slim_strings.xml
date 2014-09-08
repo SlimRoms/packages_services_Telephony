@@ -46,10 +46,10 @@
     <string name="call_notif_callconnectedect">Chiamata connessa tramite un esplicito trasferimento di chiamata</string>
 
     <!-- Advanced Settings -->
-    <string name="incall_vibration">Vibrazione intra-chiamata</string>
+    <string name="incall_vibration">Vibrazione in chiamata</string>
     <string name="vibrate_outgoing">Vibra alla risposta</string>
     <string name="vibrate_call_waiting">Vibra per chiamata in attesa</string>
-    <string name="vibrate_hangup">Vibra per messa in attesa</string>
+    <string name="vibrate_hangup">Vibra a fine chiamata</string>
     <string name="vibrate_45">Vibra ogni minuto</string>
     <string name="vibrate_45_sum">Vibra al 45esimo secondo di ogni minuto durante le chiamate in uscita</string>
     <string name="show_ssn_label">Notifica evento</string>
