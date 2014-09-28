@@ -56,9 +56,9 @@
     <string name="show_ssn_summary">Zeige eine Benachrichtigung für verschiednene Netzwerkereignisse</string>
 
     <!-- Blacklist preferences -->
-    <string name="blacklist_title">Blacklist</string>
+    <string name="blacklist_title">Sperrliste</string>
     <string name="blacklist_summary_disabled">Deaktiviert</string>
-    <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Blacklist sind, werden abgewiesen</string>
+    <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Sperrliste sind, werden abgewiesen</string>
 
     <!-- Blacklist notifications -->
     <string name="blacklist_notification">Abgewiesener Anruf von %s</string>
@@ -69,7 +69,7 @@
     <string name="unblock_number">Aufheben</string>
 
     <!-- Pulse torch with incoming call -->
-    <string name="torch_incoming_title">Lampe pulsieren bei eingehendem Anruf</string>
+    <string name="torch_incoming_title">LED-Blitz bei eingehendem Anruf</string>
     <string name="torch_incoming_seekbar_title">Wiederholfrequenz</string>
 
     <!-- Call UI in background -->
@@ -80,7 +80,7 @@
 
     <!-- Incall Glowpad transparency -->
     <string name="glow_bg_trans">Wählfeld-Transparenz</string>
-    <string name="glow_bg_trans_summary">Macht das Wählfeld während eines eingehenden Anrufes transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
+    <string name="glow_bg_trans_summary">Macht den eingehenden Anruf-Dialog transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
 
     <!-- Permission for notification-bar network toggle -->
     <string name="perm_change_mobile_network">Ändere Netzwerkmodus (2G/3G)</string>
@@ -127,7 +127,7 @@
     <string name="phone_number_summary">Telefonnummer für dieses Gerät</string>
 
     <!-- Mobile network settings screen, setting check box name -->
-    <string name="national_roaming">National Daten-Roaming</string>
+    <string name="national_roaming">Nationales Daten-Roaming</string>
     <!-- Mobile network settings screen, setting summary text when check box is selected -->
     <string name="national_roaming_enable">Daten-Verbindung herstellen bei nationalem Daten-Roaming</string>
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
