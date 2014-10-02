@@ -656,7 +656,8 @@ public class MobileNetworkSettings extends PreferenceActivity
                                     "modemNetworkMode != settingsNetworkMode");
                         }
 
-                        settingsNetworkMode = modemNetworkMode;
+			// SamsungU8500RIL falsely reports LTE here, so we instead update modemNetworkMode
+			modemNetworkMode = settingsNetworkMode;
 
                         if (DBG) { log("handleGetPreferredNetworkTypeResponse: if 2: " +
                                 "settingsNetworkMode = " + settingsNetworkMode);
