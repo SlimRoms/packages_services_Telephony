@@ -41,6 +41,7 @@ import android.os.AsyncResult;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.os.UserHandle;
 import android.os.Vibrator;
 import android.preference.CheckBoxPreference;
@@ -185,6 +186,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String KEY_TORCH_PULSE = "torch_pulse";
     private static final String KEY_TORCH_PULSE_RATE = "torch_pulse_rate";
     private static final String BUTTON_PLAY_DTMF_TONE  = "button_play_dtmf_tone";
+    private static final String PROX_AUTO_SPEAKER  = "prox_auto_speaker";
     private static final String BUTTON_DTMF_KEY        = "button_dtmf_settings";
     private static final String BUTTON_RETRY_KEY       = "button_auto_retry_key";
     private static final String BUTTON_TTY_KEY         = "button_tty_mode_key";
@@ -304,6 +306,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private SlimSeekBarPreference mTorchRate;
     /** Whether dialpad plays DTMF tone or not. */
     private CheckBoxPreference mPlayDtmfTone;
+    private CheckBoxPreference mProxSpeaker;
     private CheckBoxPreference mButtonAutoRetry;
     private CheckBoxPreference mButtonHAC;
     private CheckBoxPreference mButtonCallUiInBackground;
@@ -535,6 +538,9 @@ public class CallFeaturesSetting extends PreferenceActivity
         } else if (preference == mPlayDtmfTone) {
             Settings.System.putInt(getContentResolver(), Settings.System.DTMF_TONE_WHEN_DIALING,
                     mPlayDtmfTone.isChecked() ? 1 : 0);
+        } else if (preference == mProxSpeaker) {
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_AUTO_SPEAKER,
+                    mProxSpeaker.isChecked() ? 1 : 0);
         } else if (preference == mMwiNotification) {
             int mwi_notification = mMwiNotification.isChecked() ? 1 : 0;
             Settings.System.putInt(mPhone.getContext().getContentResolver(),
@@ -1636,6 +1642,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mPulseTorch = (CheckBoxPreference) findPreference(KEY_TORCH_PULSE);
         mTorchRate = (SlimSeekBarPreference) findPreference(KEY_TORCH_PULSE_RATE);
         mPlayDtmfTone = (CheckBoxPreference) findPreference(BUTTON_PLAY_DTMF_TONE);
+        mProxSpeaker = (CheckBoxPreference) findPreference(PROX_AUTO_SPEAKER);
         mMwiNotification = (CheckBoxPreference) findPreference(BUTTON_MWI_NOTIFICATION_KEY);
         if (mMwiNotification != null) {
             if (getResources().getBoolean(R.bool.sprint_mwi_quirk)) {
@@ -1717,6 +1724,19 @@ public class CallFeaturesSetting extends PreferenceActivity
                     Settings.System.DTMF_TONE_WHEN_DIALING, 1) != 0);
         }
 
+        if (mProxSpeaker != null) {
+            PowerManager pm = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
+            if (pm.isWakeLockLevelSupported(
+                    PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK)
+                    && getResources().getBoolean(R.bool.config_enabled_speakerprox)) {
+                mProxSpeaker.setChecked(Settings.System.getInt(contentResolver,
+                        Settings.System.PROXIMITY_AUTO_SPEAKER, 0) == 1);
+            } else {
+                prefSet.removePreference(mProxSpeaker);
+                mProxSpeaker = null;
+            }
+        }
+
         if (mButtonDTMF != null) {
             if (getResources().getBoolean(R.bool.dtmf_type_enabled)) {
                 mButtonDTMF.setOnPreferenceChangeListener(this);
@@ -1737,7 +1757,6 @@ public class CallFeaturesSetting extends PreferenceActivity
 
         if (mButtonHAC != null) {
             if (getResources().getBoolean(R.bool.hac_enabled)) {
-
                 mButtonHAC.setOnPreferenceChangeListener(this);
             } else {
                 prefSet.removePreference(mButtonHAC);

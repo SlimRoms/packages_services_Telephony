@@ -90,6 +90,13 @@
     </PreferenceScreen>
 
     <CheckBoxPreference
+        android:key="prox_auto_speaker"
+        android:title="@string/prox_auto_speaker_title"
+        android:summary="@string/prox_auto_speaker_summary"
+        android:persistent="false"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
         android:key="button_play_dtmf_tone"
         android:title="@string/dtmf_tone_enable_title"
         android:persistent="false"

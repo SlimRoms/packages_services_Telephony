@@ -166,4 +166,7 @@
 
     <!-- Use TD-SDCMA 3G/4G technologies on this device -->
     <bool name="config_enabled_tdscdma" translatable="false">false</bool>
+
+    <!-- Disable speaker proximity preference for problematic devices -->
+    <bool name="config_enabled_speakerprox" translatable="false">true</bool>
 </resources>
