@@ -39,6 +39,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
+import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -178,6 +180,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_PROXIMITY_KEY   = "button_proximity_key";
     private static final String BUTTON_VIBRATE_CONNECTED_KEY = "button_vibrate_after_connected";
     private static final String SHOW_DURATION_KEY      = "duration_enable_key";
+    private static final String BUTTON_IPPREFIX_KEY = "button_ipprefix_key";
+    private static final String BUTTON_VIDEO_CALL_FB_KEY = "videocall_setting_fb_key";
+    private static final String BUTTON_VIDEO_CALL_FW_KEY = "videocall_setting_fw_key";
+    private static final String BUTTON_VIDEO_CALL_SP_KEY = "vt_imageplacer";
 
     private static final String BUTTON_GSM_UMTS_OPTIONS = "button_gsm_more_expand_key";
     private static final String BUTTON_CDMA_OPTIONS = "button_cdma_more_expand_key";
@@ -236,6 +242,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     // voicemail notification vibration string constants
     private static final String VOICEMAIL_VIBRATION_ALWAYS = "always";
     private static final String VOICEMAIL_VIBRATION_NEVER = "never";
+
+    private PreferenceScreen mButtonVideoCallFallback;
+    private PreferenceScreen mButtonVideoCallForward;
+    private PreferenceScreen mButtonVideoCallPictureSelect;
 
     private PreferenceScreen mIPPrefixPreference;
     private EditPhoneNumberPreference mSubMenuVoicemailSettings;
@@ -515,6 +525,15 @@ public class CallFeaturesSetting extends PreferenceActivity
                 dialog.getActionBar().setDisplayHomeAsUpEnabled(false);
             }
             return false;
+        } else if (preference == mButtonVideoCallFallback) {
+            startActivity(getVTCallFBSettingsIntent());
+            return true;
+        } else if (preference == mButtonVideoCallForward) {
+            startActivity(getVTCallFWSettingsIntent());
+            return true;
+        } else if (preference == mButtonVideoCallPictureSelect) {
+            startActivity(getVTCallImageSettingsIntent());
+            return true;
         }
         return false;
     }
@@ -1584,6 +1603,13 @@ public class CallFeaturesSetting extends PreferenceActivity
             mSubMenuVoicemailSettings.setDialogTitle(R.string.voicemail_settings_number_label);
         }
 
+        if(isVTSupported()) {
+            mButtonVideoCallFallback = (PreferenceScreen)findPreference(BUTTON_VIDEO_CALL_FB_KEY);
+            mButtonVideoCallForward = (PreferenceScreen) findPreference(BUTTON_VIDEO_CALL_FW_KEY);
+            mButtonVideoCallPictureSelect = (PreferenceScreen)
+                    findPreference(BUTTON_VIDEO_CALL_SP_KEY);
+        }
+
         mButtonDTMF = (ListPreference) findPreference(BUTTON_DTMF_KEY);
         mButtonAutoRetry = (SwitchPreference) findPreference(BUTTON_RETRY_KEY);
         mButtonHAC = (SwitchPreference) findPreference(BUTTON_HAC_KEY);
@@ -1613,6 +1639,18 @@ public class CallFeaturesSetting extends PreferenceActivity
                 prefSet.removePreference(mButtonDTMF);
                 mButtonDTMF = null;
             }
+        }
+
+        if (mButtonVideoCallFallback != null) {
+            mButtonVideoCallFallback.setOnPreferenceChangeListener(this);
+        }
+
+        if (mButtonVideoCallForward != null) {
+            mButtonVideoCallForward.setOnPreferenceChangeListener(this);
+        }
+
+        if (mButtonVideoCallPictureSelect != null) {
+            mButtonVideoCallPictureSelect.setOnPreferenceChangeListener(this);
         }
 
         if (mButtonProximity != null) {
@@ -2099,6 +2137,32 @@ public class CallFeaturesSetting extends PreferenceActivity
         if (DBG) log("Loaded settings for " + key + ": " + settings.toString());
         return settings;
     }
+
+    private static Intent getVTCallFBSettingsIntent() {
+        Intent intent = new Intent("com.borqs.videocall.FallBackSetting");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        return intent;
+    }
+
+    private static Intent getVTCallFWSettingsIntent() {
+        Intent intent = new Intent("com.borqs.videocall.VTCallForwardOptions");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        return intent;
+    }
+
+    private static Intent getVTCallImageSettingsIntent() {
+        Intent intent = new Intent("com.borqs.videocall.VTImageReplaceSetting");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        return intent;
+    }
+
+    private boolean isVTSupported() {
+        return SystemProperties.getBoolean("persist.radio.csvt.enabled", false);
+    }
+
 
     /**
      * Deletes settings for the specified provider.
