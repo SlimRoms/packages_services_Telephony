@@ -92,6 +92,8 @@
 
     <string name="prox_auto_speaker_title">Automatic proximity speaker</string>
     <string name="prox_auto_speaker_summary">Enable speakerphone when the device is removed from your face</string>
+    <string name="prox_auto_speaker_incall_only_title">Only while in call</string>
+    <string name="prox_auto_speaker_incall_only_summary">Proximity sensor toggles speaker, but not while ringing</string>
 
     <!-- Setting title for dialpad key padding. -->
     <string name="dialkey_padding_title">Dialpad key padding</string>
