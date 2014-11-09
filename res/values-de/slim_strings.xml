@@ -36,8 +36,8 @@
   <string name="vibrate_hangup">Beim Auflegen vibrieren</string>
   <string name="vibrate_45">Jede Minute vibrieren</string>
   <string name="vibrate_45_sum">Vibriere 15 Sekunde vor Ende jeder vollen Minute während eines ausgehenden Anrufes</string>
-  <string name="show_ssn_label">Ereignis Benachrichtigung</string>
-  <string name="show_ssn_summary">Zeige eine Benachrichtigung für verschiednene Netzwerkereignisse</string>
+  <string name="show_ssn_label">Ereignisbenachrichtigung</string>
+  <string name="show_ssn_summary">Benachrichtigung für verschiedene, mit Telefonie zusammenhängende Netzwerkereignisse anzeigen</string>
   <string name="blacklist_title">Sperrliste</string>
   <string name="blacklist_summary_disabled">Deaktiviert</string>
   <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Sperrliste sind, werden abgewiesen</string>
@@ -50,12 +50,12 @@
   <string name="torch_incoming_title">LED-Blitz bei eingehendem Anruf</string>
   <string name="torch_incoming_seekbar_title">Wiederholfrequenz</string>
   <string name="bg_incall">Eingehender Anruf im Hintergrund</string>
-  <string name="bg_incall_summary">Behält Anruf-Dialog im Hintergrund wenn der Bildschirm an ist, zeigt nur eine Benachrichtigung und spielt den Klingelton ab.</string>
-  <string name="bg_incall_as_heads_up">Zeige als Heads-Up</string>
-  <string name="bg_incall_as_heads_up_summary">Zeigt die Hintergrundbenachrichtigung als Heads-Up.</string>
+  <string name="bg_incall_summary">Dialog für eingehenden Anruf im Hintergrund lassen, wenn der Bildschirm an ist. Nur Benachrichtigung anzeigen und Klingelton abspielen.</string>
+  <string name="bg_incall_as_heads_up">Als Heads-Up anzeigen</string>
+  <string name="bg_incall_as_heads_up_summary">Benachrichtigung im Hintergrund für eingehenden Anruf als Heads-Up anzeigen.</string>
   <string name="glow_bg_trans">Wählfeld-Transparenz</string>
   <string name="glow_bg_trans_summary">Macht den eingehenden Anruf-Dialog transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
-  <string name="perm_change_mobile_network">Ändere Netzwerkmodus (2G/3G)</string>
+  <string name="perm_change_mobile_network">Netzwerkmodus (2G/3G) ändern</string>
   <string name="perm_change_mobile_network_desc">Erlaubt einer App, zu jeder Zeit zwischen 2G und 3G zu wechseln. 3G ist schneller, aber verbraucht mehr Akku und verursacht eventuell Zusatzkosten.</string>
   <string name="dialkey_padding_title">Wählfeldtastenabstand</string>
   <string name="dialkey_padding_dialog_title">Tastenabstand für Wählfeld</string>

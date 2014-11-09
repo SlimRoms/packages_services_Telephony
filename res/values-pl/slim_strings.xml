@@ -59,6 +59,8 @@
   <string name="mwi_notification_summary">Pokaż powiadomienie oczekiwania na pocztę głosową</string>
   <string name="perm_change_mobile_network">zmień tryb sieci (2G/3G)</string>
   <string name="perm_change_mobile_network_desc">Umożliwia aplikacji zmianę trybu sieci między 2g a 3g w każdym czasie. 3G jest szybsza, ale zużywa więcej baterii i może generować dodatkowe koszty.</string>
+  <string name="prox_auto_speaker_title">Sterowanie głośnika czujnikiem</string>
+  <string name="prox_auto_speaker_summary">Włącz głośnik gdy telefon zostanie oddalony od ucha</string>
   <string name="dialkey_padding_title">Odstępy między klawiszami w dialerze</string>
   <string name="dialkey_padding_dialog_title">Odstępy między klawiszami</string>
   <string name="dialkey_padding_summary">Wielkość odstępów między klawiszami dialera z góry i dołu</string>
