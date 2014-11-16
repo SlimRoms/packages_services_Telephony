@@ -16,17 +16,27 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="call_notif_unconditionalCF">Προώθηση κλήσεων άνευ όρων ενεργή</string>
+  <string name="call_notif_conditionalCF">Προώθηση κλήσεων υπό όρους ενεργή</string>
+  <string name="call_notif_MOcall_forwarding">Η εξερχόμενη κλήση προωθείται</string>
   <string name="call_notif_cugcall">Κλήση σε κλειστή ομάδα χρηστών</string>
   <string name="call_notif_outgoing_barred">Φραγή εξερχόμενων κλήσεων</string>
+  <string name="call_notif_incoming_barred">Φραγή εισερχόμενων κλήσεων από τον απομακρυσμένο χρήστη</string>
+  <string name="call_notif_clir_suppression_rejected">Η απόκρυψη αριθμού απορρίφθηκε από το δίκτυο</string>
+  <string name="call_notif_call_deflected">Η κλήση προωθήθηκε από τον απομακρυσμένο χρήστη</string>
+  <string name="call_notif_MTcall_forwarding">Η εισερχόμενη κλήση προωθείται</string>
   <string name="call_notif_multipartycall">Συνδιάλεξη πολλαπλών χρηστών</string>
   <string name="call_notif_callonhold_released">Η κλήση απελευθερώθηκε απομακρυσμένα</string>
   <string name="call_notif_forwardcheckreceived">Η κλήση προωθήθηκε</string>
+  <string name="call_notif_callconnectingect">Η κλήση συνδέεται με μεταφορά κλήσης</string>
+  <string name="call_notif_callconnectedect">Η κλήση συνδέθηκε με μεταφορά κλήσης</string>
   <string name="incall_vibration">Δόνηση κατά την κλήση</string>
   <string name="vibrate_outgoing">Δόνηση στην απάντηση</string>
   <string name="vibrate_call_waiting">Δόνηση στην αναμονή</string>
   <string name="vibrate_hangup">Δόνηση στο κλείσιμο</string>
   <string name="vibrate_45">Δόνηση κάθε 1 λεπτό</string>
   <string name="vibrate_45_sum">Δόνηση στο 45ο δευτερόλεπτο κάθε λεπτού κατά τη διάρκεια εξερχόμενων κλήσεων</string>
+  <string name="show_ssn_label">Ειδοποιήσεις συμβάντων</string>
   <string name="show_ssn_summary">Εμφάνιση ειδοποίησης για διάφορα συμβάντα του δικτύου που σχετίζονται με το χειρισμό των κλήσεων</string>
   <string name="blacklist_title">Μαύρη Λίστα</string>
   <string name="blacklist_summary_disabled">Απενεργοποιημένο</string>
@@ -42,6 +52,27 @@
   <string name="entry_0dip">0dip</string>
   <string name="entry_5dip">5dip</string>
   <string name="entry_10dip">10dip</string>
+  <string name="entry_15dip">15dip</string>
+  <string name="entry_20dip">20dip</string>
+  <string name="entry_25dip">25dip</string>
+  <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
+  <string name="flip_action_summary">Το αναποδογύρισμα του τηλεφώνου θα <xliff:g id="action">%s</xliff:g></string>
+  <string name="entry_do_nothing">Να μην γίνει τίποτα</string>
+  <string name="entry_mute_ringer">Σίγαση ήχου</string>
+  <string name="entry_dismiss_call">Απορρίψει κλήσης</string>
+  <string name="summary_do_nothing">να μην γίνει τίποτα</string>
+  <string name="personal_category">Προσωπικές ρυθμίσεις</string>
+  <string name="phone_number_label">Ο αριθμός μου</string>
+  <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
+  <string name="national_roaming">Εθνική περιαγωγή δεδομένων</string>
+  <string name="national_roaming_enable">Συνδεθείτε με υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό επίπεδο</string>
+  <string name="national_roaming_disable">Μη συνδέεστε σε υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό επίπεδο</string>
+  <string name="noise_suppression_title">Καταστολή θορύβου</string>
+  <string name="noise_suppression_summary">Ενεργοποίηση της καταστολής θορύβου κατά τη διάρκεια κλήσεων</string>
+  <string name="number_lookup">Αναζήτηση τηλεφωνικού αριθμού</string>
+  <string name="enable_forward_lookup_summary">Εμφάνιση κοντινών τοποθεσιών κατά την αναζήτηση στην εφαρμογή του τηλεφώνου</string>
+  <string name="enable_people_lookup_title">Αναζήτηση ατόμων</string>
+  <string name="enable_people_lookup_summary">Εμφάνιση δικτυακών αποτελεσμάτων για τα άτομα κατά την αναζήτηση στην εφαρμογή του τηλεφώνου</string>
   <string name="enable_reverse_lookup_title">Αντίστροφη αναζήτηση</string>
   <string name="enable_reverse_lookup_summary">Αναζήτηση πληροφοριών σχετικά με το άτομο ή την τοποθεσία για άγνωστους αριθμούς στις εισερχόμενες κλήσεις</string>
   <string name="choose_lookup_providers">Επιλογή παρόχων αναζήτησης</string>
@@ -71,4 +102,5 @@
   <string name="preferred_network_mode_gsm_wcdma_auto">Αυτόματο GSM/WCDMA</string>
   <string name="preferred_network_mode_wcdma_only">Μόνο WCDMA</string>
   <string name="preferred_network_mode_gsm_only">Μόνο GSM</string>
+  <string name="preferred_network_mode_gsm_wcdma_preferred">Προτιμώνται GSM/WCDMA</string>
 </resources>

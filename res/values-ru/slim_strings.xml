@@ -61,6 +61,8 @@
   <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
   <string name="prox_auto_speaker_title">Автовключение громкой связи</string>
   <string name="prox_auto_speaker_summary">Автоматически включать громкую связь, когда устройство убирается от лица</string>
+  <string name="prox_auto_speaker_incall_only_title">Только во время звонка</string>
+  <string name="prox_auto_speaker_incall_only_summary">Датчик приближения переключает звук на внешний динамик, но только не во время звонка</string>
   <string name="dialkey_padding_title">Вертикальное расстояние между кнопками</string>
   <string name="dialkey_padding_dialog_title">Вертикальное расстояние между кнопками</string>
   <string name="dialkey_padding_summary">Расстояние между кнопками номеронабирателя сверху и снизу</string>

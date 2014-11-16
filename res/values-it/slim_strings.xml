@@ -59,6 +59,10 @@
   <string name="mwi_notification_summary">Mostra indicatore messaggio in attesa voicemail</string>
   <string name="perm_change_mobile_network">Cambia modalità rete (2G/3G)</string>
   <string name="perm_change_mobile_network_desc">Permetti all\'app di passare da 2G a 3G in qualsiasi momento. 3G è più veloce ma consuma più batteria e può comportare costi aggiuntivi.</string>
+  <string name="prox_auto_speaker_title">Vivavoce automatico</string>
+  <string name="prox_auto_speaker_summary">Attiva il vivavoce se il dispositivo viene allontanato dal volto</string>
+  <string name="prox_auto_speaker_incall_only_title">Solo in chiamata</string>
+  <string name="prox_auto_speaker_incall_only_summary">Vivavoce automatico attivo a chiamata aperta e non durante lo squillo</string>
   <string name="dialkey_padding_title">Distanza pulsanti tastierino telefonico</string>
   <string name="dialkey_padding_dialog_title">Distanza pulsanti tastierino</string>
   <string name="dialkey_padding_summary">Distanza (verso l\'alto e il basso) fra i pulsanti del tastierino telefonico</string>

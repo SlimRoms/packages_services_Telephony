@@ -61,6 +61,8 @@
   <string name="perm_change_mobile_network_desc">Permitir a la aplicación cambiar entre 2G y 3G en cualquier momento. 3G es más rápido pero consume más batería y puede ocasionar costes adicionales.</string>
   <string name="prox_auto_speaker_title">Altavoz de proximidad automático</string>
   <string name="prox_auto_speaker_summary">Habilitar el altavoz cuando el dispositivo se separa de tu cara</string>
+  <string name="prox_auto_speaker_incall_only_title">Solo estando en una llamada</string>
+  <string name="prox_auto_speaker_incall_only_summary">El sensor de proximidad activa el altavoz, pero no durante el tono de llamada</string>
   <string name="dialkey_padding_title">Separación de teclas del marcador</string>
   <string name="dialkey_padding_dialog_title">Separación de teclas del marcador</string>
   <string name="dialkey_padding_summary">Espaciado superior e inferior de las teclas numericas del panel de marcado</string>
