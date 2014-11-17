@@ -149,5 +149,4 @@
             android:targetPackage="com.android.phone"
             android:targetClass="com.android.phone.ImsEditor" />
     </PreferenceScreen>
-
 </PreferenceScreen>
