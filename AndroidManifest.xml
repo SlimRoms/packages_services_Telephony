@@ -717,6 +717,16 @@
        </receiver>
 
        <activity
+           android:name="CdmaCallForwardOptions"
+           android:configChanges="orientation|screenSize|keyboardHidden"
+           android:theme="@style/SettingsLight"
+           android:label="@string/labelCF" >
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+           </intent-filter>
+       </activity>
+
+       <activity
            android:name="ManagedRoaming"
            android:configChanges="orientation|screenSize|keyboardHidden"
            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
