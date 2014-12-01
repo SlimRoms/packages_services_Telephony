@@ -57,6 +57,7 @@
   <string name="glow_bg_trans_summary">Macht den eingehenden Anruf-Dialog transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
   <string name="perm_change_mobile_network">Netzwerkmodus (2G/3G) ändern</string>
   <string name="perm_change_mobile_network_desc">Erlaubt einer App, zu jeder Zeit zwischen 2G und 3G zu wechseln. 3G ist schneller, aber verbraucht mehr Akku und verursacht eventuell Zusatzkosten.</string>
+  <string name="prox_auto_speaker_incall_only_title">Nur während eines Telefonats</string>
   <string name="dialkey_padding_title">Wählfeldtastenabstand</string>
   <string name="dialkey_padding_dialog_title">Tastenabstand für Wählfeld</string>
   <string name="dialkey_padding_summary">Größe des oberen und unteren Abstands der Nummerntasten</string>
@@ -67,13 +68,13 @@
   <string name="entry_20dip">20dip</string>
   <string name="entry_25dip">25dip</string>
   <string name="flip_action_title">Umdreh-Aktion</string>
-  <string name="flip_action_dialog_title">Drehe Telefon um\u2026</string>
-  <string name="flip_action_summary">Beim Umdrehen des Telefons wird <xliff:g id="action">%s</xliff:g></string>
+  <string name="flip_action_dialog_title">Nach Umdrehen des Telefons\u2026</string>
+  <string name="flip_action_summary">Umdrehen des Telefons wird <xliff:g id="action">%s</xliff:g></string>
   <string name="entry_do_nothing">Nichts machen</string>
-  <string name="entry_mute_ringer">Ton stummschalten</string>
+  <string name="entry_mute_ringer">Ton stumm schalten</string>
   <string name="entry_dismiss_call">Anruf abweisen</string>
   <string name="summary_do_nothing">nichts gemacht</string>
-  <string name="summary_mute_ringer">der Ton stummgeschaltet</string>
+  <string name="summary_mute_ringer">der Rufton ist stumm geschaltet</string>
   <string name="summary_dismiss_call">der Anruf abgewiesen</string>
   <string name="personal_category">Benutzereinstellungen</string>
   <string name="phone_number_label">Meine Telefonnummer</string>

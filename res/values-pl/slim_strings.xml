@@ -61,6 +61,8 @@
   <string name="perm_change_mobile_network_desc">Umożliwia aplikacji zmianę trybu sieci między 2g a 3g w każdym czasie. 3G jest szybsza, ale zużywa więcej baterii i może generować dodatkowe koszty.</string>
   <string name="prox_auto_speaker_title">Sterowanie głośnika czujnikiem</string>
   <string name="prox_auto_speaker_summary">Włącz głośnik gdy telefon zostanie oddalony od ucha</string>
+  <string name="prox_auto_speaker_incall_only_title">Tylko podczas rozmowy</string>
+  <string name="prox_auto_speaker_incall_only_summary">Czujnik zbliżeniowy przełącza głośnik, ale nie gdy telefon dzwoni</string>
   <string name="dialkey_padding_title">Odstępy między klawiszami w dialerze</string>
   <string name="dialkey_padding_dialog_title">Odstępy między klawiszami</string>
   <string name="dialkey_padding_summary">Wielkość odstępów między klawiszami dialera z góry i dołu</string>
