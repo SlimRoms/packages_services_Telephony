@@ -178,8 +178,8 @@ public class ADNList extends ListActivity {
     }
 
     private static boolean isAirplaneModeOn(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
-                Settings.System.AIRPLANE_MODE_ON, 0) != 0;
+        return Settings.Global.getInt(context.getContentResolver(),
+                Settings.Global.AIRPLANE_MODE_ON, 0) != 0;
     }
 
     private class QueryHandler extends AsyncQueryHandler {
