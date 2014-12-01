@@ -31,11 +31,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemProperties;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.MenuItem;
@@ -87,7 +87,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
 
     //UI objects
     private ListPreference mButtonPreferredNetworkMode;
-    private CheckBoxPreference mButtonDataRoam;
+    private SwitchPreference mButtonDataRoam;
 
     private static final String iface = "rmnet0"; //TODO: this will go away
 
@@ -134,26 +134,6 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
         if (mGsmUmtsOptions != null &&
                 mGsmUmtsOptions.preferenceTreeClick(preference) == true) {
             return true;
-        } else if (preference == mButtonDataRoam) {
-            // Handles the click events for Data Roaming menu item.
-            if (DBG) log("onPreferenceTreeClick: preference = mButtonDataRoam");
-
-            //normally called on the toggle click
-            if (mButtonDataRoam.isChecked()) {
-                // First confirm with a warning dialog about charges
-                mOkClicked = false;
-                new AlertDialog.Builder(this).setMessage(
-                        getResources().getString(R.string.roaming_warning))
-                        .setTitle(android.R.string.dialog_alert_title)
-                        .setIconAttribute(android.R.attr.alertDialogIcon)
-                        .setPositiveButton(android.R.string.yes, this)
-                        .setNegativeButton(android.R.string.no, this)
-                        .show()
-                        .setOnDismissListener(this);
-            } else {
-                 multiSimSetDataRoaming(false);
-            }
-            return true;
         } else if (mCdmaOptions != null &&
                    mCdmaOptions.preferenceTreeClick(preference) == true) {
             if (Boolean.parseBoolean(
@@ -196,7 +176,8 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
         //get UI object references
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mButtonDataRoam = (CheckBoxPreference) prefSet.findPreference(BUTTON_ROAMING_KEY);
+        mButtonDataRoam = (SwitchPreference) prefSet.findPreference(BUTTON_ROAMING_KEY);
+        mButtonDataRoam.setOnPreferenceChangeListener(this);
         mButtonPreferredNetworkMode = (ListPreference) prefSet.findPreference(
                 BUTTON_PREFERED_NETWORK_MODE);
 
@@ -303,6 +284,25 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
                 //Set the modem network mode
                 mPhone.setPreferredNetworkType(modemNetworkMode, mHandler
                         .obtainMessage(MyHandler.MESSAGE_SET_PREFERRED_NETWORK_TYPE));
+            }
+        } else if (preference == mButtonDataRoam) {
+            // Handles the click events for Data Roaming menu item.
+            if (DBG) log("onPreferenceTreeClick: preference = mButtonDataRoam");
+
+            //normally called on the toggle click
+            if ((Boolean) objValue) {
+                // First confirm with a warning dialog about charges
+                mOkClicked = false;
+                new AlertDialog.Builder(this).setMessage(
+                        getResources().getString(R.string.roaming_warning))
+                        .setTitle(android.R.string.dialog_alert_title)
+                        .setIconAttribute(android.R.attr.alertDialogIcon)
+                        .setPositiveButton(android.R.string.yes, this)
+                        .setNegativeButton(android.R.string.no, this)
+                        .show()
+                        .setOnDismissListener(this);
+            } else {
+                 multiSimSetDataRoaming(false);
             }
         }
 
