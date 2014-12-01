@@ -182,8 +182,8 @@ public class ADNList extends ListActivity {
     }
 
     protected static boolean isAirplaneModeOn(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
-                Settings.System.AIRPLANE_MODE_ON, 0) != 0;
+        return Settings.Global.getInt(context.getContentResolver(),
+                Settings.Global.AIRPLANE_MODE_ON, 0) != 0;
     }
 
     protected class QueryHandler extends AsyncQueryHandler {

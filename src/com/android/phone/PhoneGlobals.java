@@ -46,7 +46,7 @@ import android.os.SystemProperties;
 import android.os.UpdateLock;
 import android.os.UserHandle;
 import android.preference.PreferenceManager;
-import android.provider.Settings.System;
+import android.provider.Settings.Global;
 import android.telephony.ServiceState;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -808,8 +808,8 @@ public class PhoneGlobals extends ContextWrapper {
                     SubscriptionManager.getDefaultSubId());
             String action = intent.getAction();
             if (action.equals(Intent.ACTION_AIRPLANE_MODE_CHANGED)) {
-                boolean enabled = System.getInt(getContentResolver(),
-                        System.AIRPLANE_MODE_ON, 0) == 0;
+                boolean enabled = Global.getInt(getContentResolver(),
+                        Global.AIRPLANE_MODE_ON, 0) == 0;
                 for (Phone ph : mPhones) {
                     ph.setRadioPower(enabled);
                 }
