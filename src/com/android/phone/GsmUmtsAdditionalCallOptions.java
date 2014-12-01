@@ -19,7 +19,7 @@ public class GsmUmtsAdditionalCallOptions extends
     private static final String BUTTON_CW_KEY    = "button_cw_key";
 
     private CLIRListPreference mCLIRButton;
-    private CallWaitingCheckBoxPreference mCWButton;
+    private CallWaitingSwitchPreference mCWButton;
 
     private final ArrayList<Preference> mPreferences = new ArrayList<Preference>();
     private int mInitIndex= 0;
@@ -32,7 +32,7 @@ public class GsmUmtsAdditionalCallOptions extends
 
         PreferenceScreen prefSet = getPreferenceScreen();
         mCLIRButton = (CLIRListPreference) prefSet.findPreference(BUTTON_CLIR_KEY);
-        mCWButton = (CallWaitingCheckBoxPreference) prefSet.findPreference(BUTTON_CW_KEY);
+        mCWButton = (CallWaitingSwitchPreference) prefSet.findPreference(BUTTON_CW_KEY);
 
         mPreferences.add(mCLIRButton);
         mPreferences.add(mCWButton);
@@ -76,8 +76,8 @@ public class GsmUmtsAdditionalCallOptions extends
         if (mInitIndex < mPreferences.size()-1 && !isFinishing()) {
             mInitIndex++;
             Preference pref = mPreferences.get(mInitIndex);
-            if (pref instanceof CallWaitingCheckBoxPreference) {
-                ((CallWaitingCheckBoxPreference) pref).init(this, false);
+            if (pref instanceof CallWaitingSwitchPreference) {
+                ((CallWaitingSwitchPreference) pref).init(this, false);
             }
         }
         super.onFinished(preference, reading);

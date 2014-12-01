@@ -39,12 +39,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.Settings;
 import android.telecom.PhoneAccountHandle;
@@ -246,8 +246,8 @@ public class CallFeaturesSetting extends PreferenceActivity
     };
 
     /** Whether dialpad plays DTMF tone or not. */
-    private CheckBoxPreference mButtonAutoRetry;
-    private CheckBoxPreference mButtonHAC;
+    private SwitchPreference mButtonAutoRetry;
+    private SwitchPreference mButtonHAC;
     private ListPreference mButtonDTMF;
     private ListPreference mButtonTTY;
     private Preference mPhoneAccountSettingsPreference;
@@ -255,7 +255,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private PreferenceScreen mVoicemailSettingsScreen;
     private PreferenceScreen mVoicemailSettings;
     private Preference mVoicemailNotificationRingtone;
-    private CheckBoxPreference mVoicemailNotificationVibrate;
+    private SwitchPreference mVoicemailNotificationVibrate;
     private AccountSelectionPreference mDefaultOutgoingAccount;
 
     private class VoiceMailProvider {
@@ -470,20 +470,6 @@ public class CallFeaturesSetting extends PreferenceActivity
             return true;
         } else if (preference == mButtonTTY) {
             return true;
-        } else if (preference == mButtonAutoRetry) {
-            android.provider.Settings.Global.putInt(mPhone.getContext().getContentResolver(),
-                    android.provider.Settings.Global.CALL_AUTO_RETRY,
-                    mButtonAutoRetry.isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mButtonHAC) {
-            int hac = mButtonHAC.isChecked() ? 1 : 0;
-            // Update HAC value in Settings database
-            Settings.System.putInt(mPhone.getContext().getContentResolver(),
-                    Settings.System.HEARING_AID, hac);
-
-            // Update HAC Value in AudioManager
-            mAudioManager.setParameter(HAC_KEY, hac != 0 ? HAC_VAL_ON : HAC_VAL_OFF);
-            return true;
         } else if (preference == mVoicemailSettings) {
             final Dialog dialog = mVoicemailSettings.getDialog();
             if (dialog != null) {
@@ -577,6 +563,18 @@ public class CallFeaturesSetting extends PreferenceActivity
                 mChangingVMorFwdDueToProviderChange = true;
                 saveVoiceMailAndForwardingNumber(newProviderKey, newProviderSettings);
             }
+        } else if (preference == mButtonAutoRetry) {
+            android.provider.Settings.Global.putInt(mPhone.getContext().getContentResolver(),
+                    android.provider.Settings.Global.CALL_AUTO_RETRY,
+                    (Boolean) objValue ? 1 : 0);
+        } else if (preference == mButtonHAC) {
+            int hac = (Boolean) objValue ? 1 : 0;
+            // Update HAC value in Settings database
+            Settings.System.putInt(mPhone.getContext().getContentResolver(),
+                    Settings.System.HEARING_AID, hac);
+
+            // Update HAC Value in AudioManager
+            mAudioManager.setParameter(HAC_KEY, hac != 0 ? HAC_VAL_ON : HAC_VAL_OFF);
         }
         // always let the preference setting proceed.
         return true;
@@ -1555,8 +1553,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
 
         mButtonDTMF = (ListPreference) findPreference(BUTTON_DTMF_KEY);
-        mButtonAutoRetry = (CheckBoxPreference) findPreference(BUTTON_RETRY_KEY);
-        mButtonHAC = (CheckBoxPreference) findPreference(BUTTON_HAC_KEY);
+        mButtonAutoRetry = (SwitchPreference) findPreference(BUTTON_RETRY_KEY);
+        mButtonHAC = (SwitchPreference) findPreference(BUTTON_HAC_KEY);
         mButtonTTY = (ListPreference) findPreference(BUTTON_TTY_KEY);
         mVoicemailProviders = (ListPreference) findPreference(BUTTON_VOICEMAIL_PROVIDER_KEY);
 
@@ -1568,7 +1566,7 @@ public class CallFeaturesSetting extends PreferenceActivity
             mVoicemailNotificationRingtone =
                     findPreference(BUTTON_VOICEMAIL_NOTIFICATION_RINGTONE_KEY);
             mVoicemailNotificationVibrate =
-                    (CheckBoxPreference) findPreference(BUTTON_VOICEMAIL_NOTIFICATION_VIBRATE_KEY);
+                    (SwitchPreference) findPreference(BUTTON_VOICEMAIL_NOTIFICATION_VIBRATE_KEY);
             initVoiceMailProviders();
         }
 

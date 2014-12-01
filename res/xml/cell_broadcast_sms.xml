@@ -20,7 +20,7 @@
     <PreferenceCategory 
         android:title="@string/cell_broadcast_sms">
             
-    <CheckBoxPreference 
+    <SwitchPreference
         android:key="button_enable_disable_cell_bc_sms" 
         android:title="@string/enable_disable_cell_bc_sms"
         android:persistent="false"
@@ -40,105 +40,105 @@
             android:entryValues="@array/list_language_values"
             android:dialogTitle="@string/list_language_dtitle"/>
             
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_emergency_broadcast" 
                 android:title="@string/enable_disable_emergency_broadcast"
                 android:persistent="false"
                 android:summaryOn="@string/emergency_broadcast_enable"
                 android:summaryOff="@string/emergency_broadcast_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_administrative" 
                 android:title="@string/enable_disable_administrative"
                 android:persistent="false"
                 android:summaryOn="@string/administrative_enable"
                 android:summaryOff="@string/administrative_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_maintenance" 
                 android:title="@string/enable_disable_maintenance"
                 android:persistent="false"
                 android:summaryOn="@string/maintenance_enable"
                 android:summaryOff="@string/maintenance_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_local_weather" 
                 android:title="@string/enable_disable_local_weather"
                 android:persistent="false"
                 android:summaryOn="@string/local_weather_enable"
                 android:summaryOff="@string/local_weather_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_atr" 
                 android:title="@string/enable_disable_atr"
                 android:persistent="false"
                 android:summaryOn="@string/atr_enable"
                 android:summaryOff="@string/atr_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_lafs" 
                 android:title="@string/enable_disable_lafs"
                 android:persistent="false"
                 android:summaryOn="@string/lafs_enable"
                 android:summaryOff="@string/lafs_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_restaurants" 
                 android:title="@string/enable_disable_restaurants"
                 android:persistent="false"
                 android:summaryOn="@string/restaurants_enable"
                 android:summaryOff="@string/restaurants_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_lodgings" 
                 android:title="@string/enable_disable_lodgings"
                 android:persistent="false"
                 android:summaryOn="@string/lodgings_enable"
                 android:summaryOff="@string/lodgings_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_retail_directory" 
                 android:title="@string/enable_disable_retail_directory"
                 android:persistent="false"
                 android:summaryOn="@string/retail_directory_enable"
                 android:summaryOff="@string/retail_directory_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_advertisements" 
                 android:title="@string/enable_disable_advertisements"
                 android:persistent="false"
                 android:summaryOn="@string/advertisements_enable"
                 android:summaryOff="@string/advertisements_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_stock_quotes" 
                 android:title="@string/enable_disable_stock_quotes"
                 android:persistent="false"
                 android:summaryOn="@string/stock_quotes_enable"
                 android:summaryOff="@string/stock_quotes_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_eo" 
                 android:title="@string/enable_disable_eo"
                 android:persistent="false"
                 android:summaryOn="@string/eo_enable"
                 android:summaryOff="@string/eo_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_mhh" 
                 android:title="@string/enable_disable_mhh"
                 android:persistent="false"
                 android:summaryOn="@string/mhh_enable"
                 android:summaryOff="@string/mhh_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_technology_news" 
                 android:title="@string/enable_disable_technology_news"
                 android:persistent="false"
                 android:summaryOn="@string/technology_news_enable"
                 android:summaryOff="@string/technology_news_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_multi_category" 
                 android:title="@string/enable_disable_multi_category"
                 android:persistent="false"
@@ -150,28 +150,28 @@
     <PreferenceCategory
             android:title="@string/general_news_settings">
         
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_local_general_news" 
                 android:title="@string/enable_disable_local"
                 android:persistent="false"
                 android:summaryOn="@string/local_enable"
                 android:summaryOff="@string/local_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_regional_general_news" 
                 android:title="@string/enable_disable_regional"
                 android:persistent="false"
                 android:summaryOn="@string/regional_enable"
                 android:summaryOff="@string/regional_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_national_general_news" 
                 android:title="@string/enable_disable_national"
                 android:persistent="false"
                 android:summaryOn="@string/national_enable"
                 android:summaryOff="@string/national_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_international_general_news" 
                 android:title="@string/enable_disable_international"
                 android:persistent="false"
@@ -191,28 +191,28 @@
     <PreferenceCategory
             android:title="@string/bf_news_settings">
         
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_local_bf_news" 
                 android:title="@string/enable_disable_local"
                 android:persistent="false"
                 android:summaryOn="@string/local_enable"
                 android:summaryOff="@string/local_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_regional_bf_news" 
                 android:title="@string/enable_disable_regional"
                 android:persistent="false"
                 android:summaryOn="@string/regional_enable"
                 android:summaryOff="@string/regional_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_national_bf_news" 
                 android:title="@string/enable_disable_national"
                 android:persistent="false"
                 android:summaryOn="@string/national_enable"
                 android:summaryOff="@string/national_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_international_bf_news" 
                 android:title="@string/enable_disable_international"
                 android:persistent="false"
@@ -233,28 +233,28 @@
     <PreferenceCategory
             android:title="@string/sports_news_settings">
         
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_local_sports_news" 
                 android:title="@string/enable_disable_local"
                 android:persistent="false"
                 android:summaryOn="@string/local_enable"
                 android:summaryOff="@string/local_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_regional_sports_news" 
                 android:title="@string/enable_disable_regional"
                 android:persistent="false"
                 android:summaryOn="@string/regional_enable"
                 android:summaryOff="@string/regional_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_national_sports_news" 
                 android:title="@string/enable_disable_national"
                 android:persistent="false"
                 android:summaryOn="@string/national_enable"
                 android:summaryOff="@string/national_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_international_sports_news" 
                 android:title="@string/enable_disable_international"
                 android:persistent="false"
@@ -275,28 +275,28 @@
     <PreferenceCategory
             android:title="@string/entertainment_news_settings">
         
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_local_entertainment_news" 
                 android:title="@string/enable_disable_local"
                 android:persistent="false"
                 android:summaryOn="@string/local_enable"
                 android:summaryOff="@string/local_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_regional_entertainment_news" 
                 android:title="@string/enable_disable_regional"
                 android:persistent="false"
                 android:summaryOn="@string/regional_enable"
                 android:summaryOff="@string/regional_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_national_entertainment_news" 
                 android:title="@string/enable_disable_national"
                 android:persistent="false"
                 android:summaryOn="@string/national_enable"
                 android:summaryOff="@string/national_disable"/>
                 
-        <CheckBoxPreference 
+        <SwitchPreference
                 android:key="button_international_entertainment_news" 
                 android:title="@string/enable_disable_international"
                 android:persistent="false"

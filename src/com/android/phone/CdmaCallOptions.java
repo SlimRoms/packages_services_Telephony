@@ -24,10 +24,10 @@ import android.os.AsyncResult;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.util.Log;
 
 public class CdmaCallOptions extends PreferenceActivity {
@@ -35,7 +35,7 @@ public class CdmaCallOptions extends PreferenceActivity {
     private final boolean DBG = (PhoneGlobals.DBG_LEVEL >= 2);
 
     private static final String BUTTON_VP_KEY = "button_voice_privacy_key";
-    private CheckBoxPreference mButtonVoicePrivacy;
+    private SwitchPreference mButtonVoicePrivacy;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -43,7 +43,7 @@ public class CdmaCallOptions extends PreferenceActivity {
 
         addPreferencesFromResource(R.xml.cdma_call_privacy);
 
-        mButtonVoicePrivacy = (CheckBoxPreference) findPreference(BUTTON_VP_KEY);
+        mButtonVoicePrivacy = (SwitchPreference) findPreference(BUTTON_VP_KEY);
         if (PhoneGlobals.getPhone().getPhoneType() != PhoneConstants.PHONE_TYPE_CDMA
                 || getResources().getBoolean(R.bool.config_voice_privacy_disable)) {
             //disable the entire screen
