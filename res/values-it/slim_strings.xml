@@ -91,9 +91,9 @@
   <string name="noise_suppression_summary">Attiva la soppressione dei disturbi per le chiamate</string>
   <string name="number_lookup">Ricerca avanzata numeri telefonici</string>
   <string name="enable_forward_lookup_title">Ricerca luoghi</string>
-  <string name="enable_forward_lookup_summary">Mostra risultati online per luoghi rispondendi al numero digitato nel dialer</string>
+  <string name="enable_forward_lookup_summary">Mostra risultati online per luoghi rispondenti al numero digitato nel dialer</string>
   <string name="enable_people_lookup_title">Ricerca persone</string>
-  <string name="enable_people_lookup_summary">Mostra risultati online per persone rispondendi al numero digitato nel dialer</string>
+  <string name="enable_people_lookup_summary">Mostra risultati online per persone rispondenti al numero digitato nel dialer</string>
   <string name="enable_reverse_lookup_title">Ricerca inversa</string>
   <string name="enable_reverse_lookup_summary">Informazioni su luoghi e persone rispondendi al numero sconosciuto della chiamata in arrivo</string>
   <string name="choose_lookup_providers">Scegli providers di ricerca</string>
