@@ -43,7 +43,7 @@
   <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Sperrliste sind, werden abgewiesen</string>
   <string name="blacklist_notification">Abgewiesener Anruf von %s</string>
   <string name="blacklist_notification_private_number">Abgewiesener Anruf einer unterdrückten Nummer</string>
-  <string name="blacklist_notification_list_private">Privat</string>
+  <string name="blacklist_notification_list_private">Unterdrückt</string>
   <string name="blacklist_notification_unknown_number">Unbekannte Nummer abgewiesen %s</string>
   <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> Anrufe wurden abgewiesen</string>
   <string name="unblock_number">Aufheben</string>
@@ -57,7 +57,10 @@
   <string name="glow_bg_trans_summary">Macht den eingehenden Anruf-Dialog transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
   <string name="perm_change_mobile_network">Netzwerkmodus (2G/3G) ändern</string>
   <string name="perm_change_mobile_network_desc">Erlaubt einer App, zu jeder Zeit zwischen 2G und 3G zu wechseln. 3G ist schneller, aber verbraucht mehr Akku und verursacht eventuell Zusatzkosten.</string>
+  <string name="prox_auto_speaker_title">Lautsprecher-Entfernungsautomatik</string>
+  <string name="prox_auto_speaker_summary">Freisprecheinrichtung einschalten, wenn das Gerät vom Gesicht entfernt wird</string>
   <string name="prox_auto_speaker_incall_only_title">Nur während eines Telefonats</string>
+  <string name="prox_auto_speaker_incall_only_summary">Näherungssensor schaltet Lautsprecher um, aber nicht solange es klingelt</string>
   <string name="dialkey_padding_title">Wählfeldtastenabstand</string>
   <string name="dialkey_padding_dialog_title">Tastenabstand für Wählfeld</string>
   <string name="dialkey_padding_summary">Größe des oberen und unteren Abstands der Nummerntasten</string>
@@ -119,6 +122,7 @@
   <string name="exportAllcontatsFailed">Alle Kontakte auf SIM exportieren fehlgeschlagen !!!</string>
   <string name="cursorError">Ungültige Eingabe !!! </string>
   <string name="preferred_network_mode_td_scdma_only">nur TD-SCDMA</string>
+  <string name="preferred_network_mode_global">Global</string>
   <string name="preferred_network_mode_evdo_only">nur EvDo</string>
   <string name="preferred_network_mode_cdma_without_evdo">CDMA ohne EvDo</string>
   <string name="preferred_network_mode_cdma_evdo_auto">CDMA/EvDo auto</string>

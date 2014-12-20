@@ -59,6 +59,10 @@
   <string name="mwi_notification_summary">Affiche le message d\'attente indiquant des notifications de messages vocaux</string>
   <string name="perm_change_mobile_network">changement du mode réseau (2G/3G)</string>
   <string name="perm_change_mobile_network_desc">Autorise l\'application à changer entre 2G data et 3G data à tout moment. La 3G est plus rapide, mais consomme plus de batterie et peut causer des frais additionnels.</string>
+  <string name="prox_auto_speaker_title">Haut-parleur automatique</string>
+  <string name="prox_auto_speaker_summary">Activer les haut-parleurs quand l\'appareil n\'est plus contre votre visage</string>
+  <string name="prox_auto_speaker_incall_only_title">Seulement pendant un appel</string>
+  <string name="prox_auto_speaker_incall_only_summary">Le capteur de proximité va désactiver/activer le haut-parleur, mais pas durant la sonnerie</string>
   <string name="dialkey_padding_title">Espacement des touches du clavier</string>
   <string name="dialkey_padding_dialog_title">Espacement pour les touches du clavier</string>
   <string name="dialkey_padding_summary">Niveau d\'espacement en haut et en bas des touches du clavier</string>
