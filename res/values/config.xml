@@ -149,4 +149,7 @@
 
     <!-- Allows the telephony HFA logic to run even if we're not in setup wizard. -->
     <bool name="config_allow_hfa_outside_of_setup_wizard">true</bool>
+
+    <!-- Disable speaker proximity preference for problematic devices -->
+    <bool name="config_enabled_speakerprox" translatable="false">true</bool>
 </resources>
