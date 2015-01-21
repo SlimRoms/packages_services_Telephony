@@ -47,7 +47,7 @@ import com.android.phone.R;
 
 import java.util.List;
 
-public class SelectSubscription extends  TabActivity {
+public class SelectSubscription extends TabActivity {
 
     private static final String LOG_TAG = "SelectSubscription";
     private static final boolean DBG = (PhoneGlobals.DBG_LEVEL >= 2);
@@ -93,9 +93,7 @@ public class SelectSubscription extends  TabActivity {
 
             log("Creating SelectSub activity = " + i + " displayName = " + displayName);
 
-            // Add phone Id to the displayName to differentiate
-            // tag names of tabs.
-            subscriptionPref = tabHost.newTabSpec(displayName + i);
+            subscriptionPref = tabHost.newTabSpec(Integer.toString(i));
             subscriptionPref.setIndicator(displayName);
             intent = new Intent().setClassName(pkg, targetClass)
                     .setAction(intent.getAction());
