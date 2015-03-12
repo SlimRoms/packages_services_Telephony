@@ -25,4 +25,24 @@
     <string name="prox_auto_speaker_incall_only_summary_on">On outgoing calls, listener will only become active after the receiving party answers</string>
     <string name="prox_auto_speaker_incall_only_summary_off">Listener will be active during all offhook call states (default)</string>
 
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Advanced Settings</string>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Blacklist</string>
+    <string name="blacklist_summary_disabled">Disabled</string>
+    <string name="blacklist_summary">Incoming calls from phone numbers in the blacklist will be blocked</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_call_notification">Blocked a call from %s</string>
+    <string name="blacklist_call_notification_private_number">Blocked a call from a private number</string>
+    <string name="blacklist_call_notification_unknown_number">Blocked a call from unknown number %s</string>
+    <string name="blacklist_call_notification_multiple"><xliff:g id="count">%d</xliff:g> calls were blocked</string>
+    <string name="blacklist_message_notification">Blocked a message from %s</string>
+    <string name="blacklist_message_notification_private_number">Blocked a message from a private number</string>
+    <string name="blacklist_message_notification_unknown_number">Blocked a message from unknown number %s</string>
+    <string name="blacklist_message_notification_multiple"><xliff:g id="count">%d</xliff:g> messages were blocked</string>
+    <string name="blacklist_notification_list_private">Private</string>
+    <string name="unblock_number">Unblock</string>
+
 </resources>
