@@ -219,7 +219,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
             int settingsNetworkMode = getPreferredNetworkMode();
             mButtonPreferredNetworkMode.setValue(Integer.toString(settingsNetworkMode));
             mCdmaOptions = new CdmaOptions(this, prefSet, mPhone);
-            mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getPhoneId());
+            mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getSubId());
         } else {
             if (!isLteOnCdma) {
                 prefSet.removePreference(mButtonPreferredNetworkMode);
@@ -236,7 +236,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
                 }
 
             } else if (phoneType == PhoneConstants.PHONE_TYPE_GSM) {
-                mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getPhoneId());
+                mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getSubId());
             } else {
                 throw new IllegalStateException("Unexpected phone type: " + phoneType);
             }
