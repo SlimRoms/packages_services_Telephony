@@ -343,8 +343,8 @@ public class OtaUtils {
         // We won't actually make the call until the user presses the "Activate"
         // button.
 
-        Intent activationScreenIntent = new Intent().setClass(context, InCallScreen.class)
-                .setAction(ACTION_DISPLAY_ACTIVATION_SCREEN);
+        Intent activationScreenIntent = new Intent().setClass(context,
+                InCallScreenShowActivation.class).setAction(ACTION_DISPLAY_ACTIVATION_SCREEN);
 
         // Watch out: in the scenario where OTASP gets triggered from the
         // BOOT_COMPLETED broadcast (see OtaStartupReceiver.java), we might be
