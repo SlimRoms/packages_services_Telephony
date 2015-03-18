@@ -190,7 +190,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
         addPreferencesFromResource(R.xml.msim_network_sub_setting);
 
         mPhone = PhoneUtils.getPhoneFromIntent(getIntent());
-        log("Settings onCreate phoneId =" + mPhone.getPhoneId() + " subId = " + mPhone.getSubId());
+        log("Settings onCreate phoneId =" + mPhone.getPhoneId());
         mHandler = new MyHandler();
 
         //get UI object references
@@ -206,7 +206,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
             prefSet.removePreference(mUPLMNPref);
             mUPLMNPref = null;
         } else {
-            mUPLMNPref.getIntent().putExtra(PhoneConstants.SUBSCRIPTION_KEY, mPhone.getSubId());
+            mUPLMNPref.getIntent().putExtra(PhoneConstants.SUBSCRIPTION_KEY, mPhone.getPhoneId());
         }
 
         boolean isLteOnCdma = mPhone.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE;
@@ -219,7 +219,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
             int settingsNetworkMode = getPreferredNetworkMode();
             mButtonPreferredNetworkMode.setValue(Integer.toString(settingsNetworkMode));
             mCdmaOptions = new CdmaOptions(this, prefSet, mPhone);
-            mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getSubId());
+            mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getPhoneId());
         } else {
             if (!isLteOnCdma) {
                 prefSet.removePreference(mButtonPreferredNetworkMode);
@@ -236,7 +236,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
                 }
 
             } else if (phoneType == PhoneConstants.PHONE_TYPE_GSM) {
-                mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getSubId());
+                mGsmUmtsOptions = new GsmUmtsOptions(this, prefSet, mPhone.getPhoneId());
             } else {
                 throw new IllegalStateException("Unexpected phone type: " + phoneType);
             }
@@ -316,7 +316,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
             nwMode = android.telephony.TelephonyManager.getIntAtIndex(
                     mPhone.getContext().getContentResolver(),
                     android.provider.Settings.Global.PREFERRED_NETWORK_MODE,
-                    mPhone.getSubId());
+                    mPhone.getPhoneId());
         } catch (SettingNotFoundException snfe) {
             log("getPreferredNetworkMode: Could not find PREFERRED_NETWORK_MODE!!!");
             nwMode = preferredNetworkMode;
@@ -328,7 +328,7 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
         android.telephony.TelephonyManager.putIntAtIndex(
                     mPhone.getContext().getContentResolver(),
                     android.provider.Settings.Global.PREFERRED_NETWORK_MODE,
-                    mPhone.getSubId(), nwMode);
+                    mPhone.getPhoneId(), nwMode);
     }
 
     private class MyHandler extends Handler {
@@ -616,9 +616,9 @@ public class MSimMobileNetworkSubSettings extends PreferenceActivity
         SharedPreferences sp = mPhone.getContext().getSharedPreferences(PREF_FILE,
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
-        editor.putInt(KEY_PREF_NETWORK_MODE + mPhone.getSubId(), preNetworkType);
+        editor.putInt(KEY_PREF_NETWORK_MODE + mPhone.getPhoneId(), preNetworkType);
         editor.apply();
-        log("updating network type : " + preNetworkType + " for subId : " + mPhone.getSubId() +
+        log("updating network type : " + preNetworkType + " for phoneId : " + mPhone.getPhoneId() +
             " in shared preference" + " context is : " + mPhone.getContext());
     }
 }
