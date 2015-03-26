@@ -51,6 +51,8 @@ import android.preference.SwitchPreference;
 import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
@@ -1418,7 +1420,7 @@ public class MSimCallFeaturesSubSetting extends PreferenceActivity
         // In all dialogs, all buttons except BUTTON_POSITIVE lead to the end of user interaction
         // with settings UI. If we were called to explicitly configure voice mail then
         // we finish the settings activity here to come back to whatever the user was doing.
-        if (getIntent().getAction().equals(ACTION_ADD_VOICEMAIL)) {
+        if (ACTION_ADD_VOICEMAIL.equals(getIntent().getAction())) {
             finish();
         }
     }
@@ -1539,7 +1541,7 @@ public class MSimCallFeaturesSubSetting extends PreferenceActivity
         // the selection for the VM provider, otherwise bring up a VM number dialog.
         // We only bring up the dialog the first time we are called (not after orientation change)
         if (icicle == null) {
-            if (getIntent().getAction().equals(ACTION_ADD_VOICEMAIL) &&
+            if (ACTION_ADD_VOICEMAIL.equals(getIntent().getAction()) &&
                     mVoicemailProviders != null) {
                 if (DBG) {
                     log("ACTION_ADD_VOICEMAIL Intent is thrown. current VM data size: "
@@ -1582,6 +1584,12 @@ public class MSimCallFeaturesSubSetting extends PreferenceActivity
         if (actionBar != null) {
             // android.R.id.home will be triggered in onOptionsItemSelected()
             actionBar.setDisplayHomeAsUpEnabled(true);
+
+            SubscriptionManager subMgr = SubscriptionManager.from(this);
+            SubscriptionInfo sir = subMgr.getActiveSubscriptionInfo(mSubId);
+            if (sir != null) {
+                actionBar.setSubtitle(sir.getDisplayName());
+            }
         }
     }
 
@@ -1671,7 +1679,7 @@ public class MSimCallFeaturesSubSetting extends PreferenceActivity
                         VM_NUMBERS_SHARED_PREFERENCES_NAME, MODE_PRIVATE);
 
         String providerToIgnore = null;
-        if (getIntent().getAction().equals(ACTION_ADD_VOICEMAIL)) {
+        if (ACTION_ADD_VOICEMAIL.equals(getIntent().getAction())) {
             if (getIntent().hasExtra(IGNORE_PROVIDER_EXTRA)) {
                 providerToIgnore = getIntent().getStringExtra(IGNORE_PROVIDER_EXTRA);
             }

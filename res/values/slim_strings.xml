@@ -29,4 +29,9 @@
     <string name="perm_change_mobile_network">change network mode (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Allows the app to change between 2G data and 3G data at any time. 3G is faster, but consumes more battery and may cause additional cost.</string>
 
+    <!-- msim call settings -->
+    <string name="sim_card_title">SIM card %d</string>
+    <string name="sim_card_summary_empty">SIM slot is empty</string>
+
+
 </resources>
