@@ -66,20 +66,4 @@
         android:entries="@array/dtmf_tone_entries"
         android:entryValues="@array/dtmf_tone_values"/>
 
-    <SwitchPreference
-        android:key="button_enable_video_calling"
-        android:title="@string/enable_video_calling_title"
-        android:persistent="true"
-        android:defaultValue="true" />
-
-      <PreferenceScreen
-          android:key="button_xdivert"
-          android:title="@string/xdivert_title"
-          android:summary="@string/xdivert_summary"
-          android:persistent="false">
-          <intent android:action="android.intent.action.MAIN"
-                  android:targetPackage="com.qti.xdivert"
-                      android:targetClass="com.qti.xdivert.XDivertSetting" />
-      </PreferenceScreen>
-
 </PreferenceScreen>
