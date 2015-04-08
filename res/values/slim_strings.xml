@@ -33,5 +33,19 @@
     <string name="sim_card_title">SIM card %d</string>
     <string name="sim_card_summary_empty">SIM slot is empty</string>
 
+    <!-- Mobile network settings, preferred network modes -->
+    <string name="network_wcdma_only">@string/network_3G</string>
+    <string name="network_gsm_umts">@string/network_3G</string>
+    <string name="network_wcdma_pref">@string/network_3G</string>
+    <string name="network_gsm_only">@string/network_2G</string>
+    <string name="network_lte_gsm_wcdma">@string/network_lte</string>
+    <string name="network_lte_cdma">@string/network_lte</string>
+    <string name="network_lte_only">@string/network_lte</string>
+    <string name="network_lte_cdma_and_evdo">@string/network_lte</string>
+    <string name="network_cdma">@string/network_3G</string>
+    <string name="network_evdo_no_cdma">@string/network_3G</string>
+    <string name="network_3g_global">@string/network_3G</string>
+    <string name="network_cdma_no_evdo">@string/network_1x</string>
+    <string name="network_lte_cdma_evdo_gsm_wcdma">@string/network_global</string>
 
 </resources>
