@@ -198,6 +198,9 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_SELECT_SUB_KEY  = "button_call_independent_serv";
     private static final String BUTTON_XDIVERT_KEY = "button_xdivert";
     private static final String USE_NON_INTRUSIVE_CALL_KEY = "use_non_intrusive_call";
+
+    private static final String FLIP_ACTION_KEY = "flip_action";
+
     private Intent mContactListIntent;
 
     /** Event for Async voicemail change call */
@@ -280,6 +283,9 @@ public class CallFeaturesSetting extends PreferenceActivity
     private boolean isSpeedDialListStarted = false;
     private PreferenceScreen mButtonBlacklist;
     private SwitchPreference mUseNonIntrusiveCall;
+
+
+    private ListPreference mFlipAction;
 
     private class VoiceMailProvider {
         public VoiceMailProvider(String name, Intent intent) {
@@ -623,9 +629,21 @@ public class CallFeaturesSetting extends PreferenceActivity
             final boolean val = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.USE_NON_INTRUSIVE_CALL, val ? 1 : 0);
+        } else if (preference == mFlipAction) {
+            int index = mFlipAction.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.CALL_FLIP_ACTION_KEY, index);
+            updateFlipActionSummary(index);
         }
         // always let the preference setting proceed.
         return true;
+    }
+
+    private void updateFlipActionSummary(int value) {
+        if (mFlipAction != null) {
+            String[] summaries = getResources().getStringArray(R.array.flip_action_summary_entries);
+            mFlipAction.setSummary(getString(R.string.flip_action_summary, summaries[value]));
+        }
     }
 
     @Override
@@ -1627,6 +1645,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         mButtonTTY = (ListPreference) findPreference(BUTTON_TTY_KEY);
         mVoicemailProviders = (ListPreference) findPreference(BUTTON_VOICEMAIL_PROVIDER_KEY);
 
+        mFlipAction = (ListPreference) findPreference(FLIP_ACTION_KEY);
+
         if (mVoicemailProviders != null) {
             mVoicemailProviders.setOnPreferenceChangeListener(this);
             mVoicemailSettingsScreen =
@@ -1727,6 +1747,11 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
 
         if (!getResources().getBoolean(R.bool.world_phone) && (!isMsim)) {
+
+        if (mFlipAction != null) {
+            mFlipAction.setOnPreferenceChangeListener(this);
+        }
+
             Preference options = prefSet.findPreference(BUTTON_CDMA_OPTIONS);
             if (options != null) {
                 prefSet.removePreference(options);
@@ -1833,6 +1858,13 @@ public class CallFeaturesSetting extends PreferenceActivity
         if (mUseNonIntrusiveCall != null) {
             mUseNonIntrusiveCall.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.USE_NON_INTRUSIVE_CALL, 1) != 0);
+        }
+
+        if (mFlipAction != null) {
+            int flipAction = Settings.System.getInt(getContentResolver(),
+                    Settings.System.CALL_FLIP_ACTION_KEY, 2);
+            mFlipAction.setValue(String.valueOf(flipAction));
+            updateFlipActionSummary(flipAction);
         }
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(
