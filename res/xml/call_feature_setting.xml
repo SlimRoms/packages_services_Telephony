@@ -150,4 +150,12 @@
             android:targetClass="com.android.phone.ImsEditor" />
     </PreferenceScreen>
 
+    <ListPreference
+        android:key="flip_action"
+        android:title="@string/flip_action_title"
+        android:dialogTitle="@string/flip_action_dialog_title"
+        android:entries="@array/flip_action_setting_entries"
+        android:entryValues="@array/flip_action_setting_values"
+        android:persistent="false" />
+
 </PreferenceScreen>
