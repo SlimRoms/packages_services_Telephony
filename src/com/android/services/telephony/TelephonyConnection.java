@@ -35,7 +35,7 @@ import android.telephony.PhoneNumberUtils;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
-import android.widget.Toast;
+// import android.widget.Toast;
 
 import com.android.internal.telephony.Call;
 import com.android.internal.telephony.CallManager;
@@ -160,8 +160,8 @@ abstract class TelephonyConnection extends Connection {
                             final String history =(mSsNotification.history != null
                                     && mSsNotification.history.length > 0) ?
                                     " History: " + Arrays.toString(mSsNotification.history) : "";
-                            Toast.makeText(TelephonyGlobals.getApplicationContext(),
-                                    mDisplayName + history, Toast.LENGTH_LONG).show();
+//                            Toast.makeText(TelephonyGlobals.getApplicationContext(),
+//                                    mDisplayName + history, Toast.LENGTH_LONG).show();
                         }
                     } else {
                         Log.v(TelephonyConnection.this,
