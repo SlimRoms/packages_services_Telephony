@@ -26,7 +26,7 @@ import android.telephony.TelephonyManager;
 import android.os.AsyncResult;
 import android.os.Handler;
 import android.os.Message;
-import android.widget.Toast;
+// import android.widget.Toast;
 
 
 import com.android.internal.telephony.gsm.SuppServiceNotification;
@@ -132,8 +132,8 @@ public class TelephonyGlobals {
                                     && mSsNotification[phoneId].history.length > 0) ?
                                     " History: " + Arrays.toString
                                             (mSsNotification[phoneId].history) : "";
-                            Toast.makeText(TelephonyGlobals.getApplicationContext(),
-                                    mDisplayName + history, Toast.LENGTH_LONG).show();
+//                            Toast.makeText(TelephonyGlobals.getApplicationContext(),
+//                                    mDisplayName + history, Toast.LENGTH_LONG).show();
                         }
                     } else {
                         Log.v(LOG_TAG,
