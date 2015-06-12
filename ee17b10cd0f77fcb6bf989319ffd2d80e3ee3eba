@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a288981_e89f2f4f",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 1000043
+      },
+      "writtenOn": "2015-06-12T22:20:51Z",
+      "side": 1,
+      "message": "still dead space",
+      "range": {
+        "startLine": 623,
+        "startChar": 0,
+        "endLine": 623,
+        "endChar": 8
+      },
+      "revId": "ee17b10cd0f77fcb6bf989319ffd2d80e3ee3eba",
+      "serverId": "f8201d64-d729-4630-b91d-5f8be02869f0",
+      "unresolved": false
+    }
+  ]
+}
