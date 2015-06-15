@@ -1787,7 +1787,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
 
         if (isMsim && TelephonyManager.getDefault().getMultiSimConfiguration() !=
-                TelephonyManager.MultiSimVariants.DSDS) {
+                TelephonyManager.MultiSimVariants.DSDS &&
+                getResources().getBoolean(R.bool.config_enabled_xdivert)) {
             PreferenceScreen mXDivertPref = (PreferenceScreen) findPreference(BUTTON_XDIVERT_KEY);
             if (mXDivertPref != null) {
                 log("Remove xdivert preference");
