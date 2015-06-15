@@ -18,6 +18,9 @@
     <!-- Disable speaker proximity preference for problematic devices -->
     <bool name="config_enabled_speakerprox" translatable="false">true</bool>
 
+    <!-- Enable xdivert feature for devices with com.qti.xdivert package -->
+    <bool name="config_enabled_xdivert" translatable="false">false</bool>
+
 </resources>
 
 

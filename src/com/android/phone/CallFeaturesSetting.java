@@ -1786,8 +1786,9 @@ public class CallFeaturesSetting extends PreferenceActivity
                     "com.android.phone.MSimCallFeaturesSubSetting");
         }
 
-        if (isMsim && TelephonyManager.getDefault().getMultiSimConfiguration() !=
-                TelephonyManager.MultiSimVariants.DSDS) {
+        if (isMsim && (TelephonyManager.getDefault().getMultiSimConfiguration() !=
+                TelephonyManager.MultiSimVariants.DSDS ||
+                !getResources().getBoolean(R.bool.config_enabled_xdivert))) {
             PreferenceScreen mXDivertPref = (PreferenceScreen) findPreference(BUTTON_XDIVERT_KEY);
             if (mXDivertPref != null) {
                 log("Remove xdivert preference");
