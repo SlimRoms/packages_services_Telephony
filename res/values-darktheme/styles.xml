@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Settings" parent="@android:style/Theme.Material.DialogWhenLarge">
+        <item name="android:colorPrimary">#ff111111</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+    </style>
+    <style name="SettingsLight" parent="@android:style/Theme.Material">
+        <item name="android:colorPrimary">#ff111111</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+    </style>
+    <style name="NetworkOperatorsSettingsTheme" parent="@android:style/Theme.Material">
+        <item name="android:colorPrimary">#ff111111</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+    </style>
+    <style name="DialerAlertDialogTheme" parent="@android:style/Theme.Material.Dialog">
+        <item name="android:colorPrimary">#ff111111</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ffffffff</item>
+    </style>
+    <style name="Theme.Material.Settings" parent="@android:style/Theme.Material">
+        <item name="android:actionBarSize">56.0dip</item>
+        <item name="android:colorPrimary">#ff111111</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+    </style>
+</resources>
