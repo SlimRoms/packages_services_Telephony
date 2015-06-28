@@ -45,4 +45,7 @@
     <string name="blacklist_notification_list_private">Private</string>
     <string name="unblock_number">Unblock</string>
 
+    <!-- Title for the option managing whether or not to use non-intrusive incall UI. -->
+    <string name="use_non_intrusive_call_title">Non-intrusive incoming calls</string>
+
 </resources>
