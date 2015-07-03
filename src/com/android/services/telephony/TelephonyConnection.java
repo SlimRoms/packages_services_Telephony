@@ -1149,14 +1149,7 @@ protected final void updateCallCapabilities() {
                     setRinging();
                     break;
                 case DISCONNECTED:
-                    mSsNotification = TelephonyGlobals.mSsNotification[getPhone().getPhoneId()];
-                    if (mSsNotification != null) {
-                        setDisconnected(DisconnectCauseUtil.toTelecomDisconnectCause(
-                                mOriginalConnection.getDisconnectCause(),
-                                mSsNotification.notificationType,
-                                mSsNotification.code));
-                        mSsNotification = null;
-                    } else if(isEmergencyNumber &&
+                    if(isEmergencyNumber &&
                             (TelephonyManager.getDefault().getPhoneCount() > 1) &&
                             ((cause == android.telephony.DisconnectCause.EMERGENCY_TEMP_FAILURE) ||
                             (cause == android.telephony.DisconnectCause.EMERGENCY_PERM_FAILURE))) {
@@ -1164,11 +1157,10 @@ protected final void updateCallCapabilities() {
                         // EMERGENCY_TEMP_FAILURE & EMERGENCY_PERM_FAILURE, then redial on other sub.
                         emergencyRedial(cause, phone);
                         break;
-                    } else {
-                        setDisconnected(DisconnectCauseUtil.toTelecomDisconnectCause(
-                                mOriginalConnection.getDisconnectCause(), 0xFF, 0xFF));
                     }
                     resetDisconnectCause();
+                    setDisconnected(DisconnectCauseUtil.toTelecomDisconnectCause(
+                            mOriginalConnection.getDisconnectCause()));
                     close();
                     break;
                 case DISCONNECTING:
