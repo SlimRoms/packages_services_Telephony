@@ -39,6 +39,8 @@ import android.text.TextUtils;
 
 import com.android.internal.telephony.Call;
 import com.android.internal.telephony.CallStateException;
+import com.android.internal.telephony.IccCard;
+import com.android.internal.telephony.IccCardConstants;
 import com.android.internal.telephony.IExtTelephony;
 import com.android.internal.telephony.IccCard;
 import com.android.internal.telephony.IccCardConstants;
