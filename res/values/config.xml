@@ -199,7 +199,11 @@
     <!-- Class name for the SIM unlock dialog.[DO NOT TRANSLATE] -->
     <string name="config_simUnlockUiClass" translatable="false">@null</string>
 
+    <!-- Flag indicating whether to allow visual voicemail if available on the device.[DO NOT TRANSLATE] -->
     <bool name="allow_visual_voicemail">true</bool>
+
+    <!-- Component for custom voicemail notification handling. [DO NOT TRANSLATE] -->
+    <string name="config_customVoicemailComponent">@null</string>
 
     <!-- Show Preferred Network Type options in No SIM case -->
     <bool name="config_no_sim_display_network_modes">false</bool>
