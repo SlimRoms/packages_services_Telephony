@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a51691d_505821fa",
+        "filename": "res/values/array.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000043
+      },
+      "writtenOn": "2015-08-17T14:43:15Z",
+      "side": 1,
+      "message": "Should be in slim_array.xml",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 54,
+        "endChar": 19
+      },
+      "revId": "19278b51bf0ac0f168473010a0c77b56a6fd884d",
+      "serverId": "f8201d64-d729-4630-b91d-5f8be02869f0",
+      "unresolved": false
+    }
+  ]
+}
