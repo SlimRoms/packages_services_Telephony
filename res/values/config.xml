@@ -210,6 +210,9 @@
     <!-- Component for custom voicemail notification handling. [DO NOT TRANSLATE] -->
     <string name="config_customVoicemailComponent">@null</string>
 
+    <!-- Flag indicating whether to allow pstn phone accounts [DO NOT TRANSLATE] -->
+    <bool name="config_pstn_phone_accounts_enabled">true</bool>
+
     <!-- Show Preferred Network Type options in No SIM case -->
     <bool name="config_no_sim_display_network_modes">false</bool>
 
