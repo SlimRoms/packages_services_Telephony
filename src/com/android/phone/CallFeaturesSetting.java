@@ -25,6 +25,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
@@ -353,6 +354,10 @@ public class CallFeaturesSetting extends PreferenceActivity
             /* tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE); */
         }
 
+        if (!isAppInstalled(this, "com.qualcomm.qti.ims")) {
+            prefSet.removePreference(findPreference("ims_settings_key"));
+        }
+
         Preference wifiCallingSettings = findPreference(
                 getResources().getString(R.string.wifi_calling_settings_key));
 
@@ -396,6 +401,22 @@ public class CallFeaturesSetting extends PreferenceActivity
             }
             wifiCallingSettings.setSummary(resId);
         }
+    }
+
+    private boolean isAppInstalled(final Context context, final String packageName) {
+        return this.getApplicationInfo(context, packageName, 0) != null;
+    }
+
+    private static ApplicationInfo getApplicationInfo(final Context context,
+                                                     final String packageName, final int flags) {
+        final PackageManager packageManager = context.getPackageManager();
+        ApplicationInfo info;
+        try {
+            info = packageManager.getApplicationInfo(packageName, flags);
+        } catch (PackageManager.NameNotFoundException e) {
+            info = null;
+        }
+        return info;
     }
 
     @Override
