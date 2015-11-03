@@ -16,6 +16,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
         volley \
         ims-ext-common
 
+# Include Slim's frameworks
+LOCAL_JAVA_LIBRARIES += org.slim.framework
+
 LOCAL_SRC_FILES := $(call all-java-files-under, $(src_dirs))
 LOCAL_SRC_FILES += \
         src/com/android/phone/EventLogTags.logtags \
