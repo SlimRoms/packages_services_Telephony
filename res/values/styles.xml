@@ -160,7 +160,7 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
-    <style name="SettingsLight" parent="android:Theme.Material.Light">
+    <style name="SettingsLight" parent="android:Theme.Material.DayNight">
         <item name="android:windowBackground">@color/phone_settings_background_color</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:actionBarStyle">@style/DialtactsActionBarStyle</item>
@@ -186,13 +186,13 @@
         <item name="android:textColor">?android:attr/textColorPrimaryInverseDisableOnly</item>
     </style>
 
-    <style name="NetworkOperatorsSettingsTheme" parent="@android:style/Theme.Material.Light">
+    <style name="NetworkOperatorsSettingsTheme" parent="@android:style/Theme.Material.DayNight">
         <item name="android:actionBarTheme">@android:style/ThemeOverlay.Material.Dark.ActionBar</item>
         <item name="android:colorPrimary">@color/network_operators_color_primary</item>
         <item name="android:colorPrimaryDark">@color/network_operators_color_primary_dark</item>
     </style>
 
-    <style name="Empty" parent="@android:style/Theme.Material.Light">
+    <style name="Empty" parent="@android:style/Theme.Material.DayNight">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -265,7 +265,7 @@
         <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
     </style>
 
-    <style name="SimImportTheme" parent="@android:style/Theme.Material.Light">
+    <style name="SimImportTheme" parent="@android:style/Theme.Material.DayNight">
         <item name="android:actionBarStyle">@style/TelephonyActionBarStyle</item>
         <item name="android:colorPrimaryDark">@color/dialer_theme_color_dark</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
