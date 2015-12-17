@@ -738,7 +738,8 @@
        <activity
            android:name="ManagedRoaming"
            android:configChanges="orientation|screenSize|keyboardHidden"
-           android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+           android:theme="@android:style/Theme.Translucent.NoTitleBar"
+           android:excludeFromRecents="true">
        </activity>
 
     </application>

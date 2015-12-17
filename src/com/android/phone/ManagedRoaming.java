@@ -103,7 +103,6 @@ public class ManagedRoaming extends Activity {
                 }
             });
             mIsMRDialogShown = true;
-            managedRoamingDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
             managedRoamingDialog.show();
         } else {
             finish();
