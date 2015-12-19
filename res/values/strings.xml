@@ -260,6 +260,7 @@
 
     <!-- Call forwarding settings screen, setting option name -->
     <string name="labelCFNRc">When unreachable</string>
+    <string name="labelCFNRc_cdma">Forward Implicitly</string>
     <!-- Call forwarding dialog box, text field label -->
     <string name="messageCFNRc">Number when unreachable</string>
     <!-- Call forwarding settings screen, setting summary text when forwarding to a specific number when unreachable-->
@@ -1497,4 +1498,8 @@
      <!-- Summary for the XDivert Feature displayed in Call Settings -->
      <string name="xdivert_summary">CFNRc Settings</string>
 
+    <string name="CFActivate">Activate</string>
+    <string name="CFDeactivate">Deactivate</string>
+    <string name="null_phone_number">Phone number cannot be null !</string>
+    <string name="labelCFDeactAll">Deactivate All</string>
 </resources>
