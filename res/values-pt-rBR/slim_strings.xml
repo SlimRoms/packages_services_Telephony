@@ -35,7 +35,7 @@
   <string name="vibrate_call_waiting">Vibrar ao receber chamada em espera</string>
   <string name="vibrate_hangup">Vibrar ao desligar</string>
   <string name="vibrate_45">Vibrar a cada minuto</string>
-  <string name="vibrate_45_sum">Vibra aos 45 segundos de cada minuto durante chamadas realizadas</string>
+  <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamadas realizadas</string>
   <string name="show_ssn_label">Notificação de eventos</string>
   <string name="show_ssn_summary">Mostrar uma notificação para vários eventos de rede relacionados ao tratamento de chamadas</string>
   <string name="blacklist_title">Lista de bloqueio</string>

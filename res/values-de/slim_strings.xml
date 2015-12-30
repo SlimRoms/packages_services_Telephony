@@ -31,7 +31,7 @@
   <string name="call_notif_callconnectingect">Externe Anrufverbindung herstellen</string>
   <string name="call_notif_callconnectedect">Externer Anruf hergestellt</string>
   <string name="incall_vibration">Vibrationseinstellungen</string>
-  <string name="vibrate_outgoing">Beim Antworten vibrieren</string>
+  <string name="vibrate_outgoing">Bei Annahme vibrieren</string>
   <string name="vibrate_call_waiting">Beim Anklopfen vibrieren</string>
   <string name="vibrate_hangup">Beim Auflegen vibrieren</string>
   <string name="vibrate_45">Jede Minute vibrieren</string>
@@ -40,8 +40,8 @@
   <string name="show_ssn_summary">Benachrichtigung für verschiedene, mit Telefonie zusammenhängende Netzwerkereignisse anzeigen</string>
   <string name="blacklist_title">Sperrliste</string>
   <string name="blacklist_summary_disabled">Deaktiviert</string>
-  <string name="blacklist_summary">Eingehende Anrufe von Nummern, die auf der Sperrliste sind, werden abgewiesen</string>
-  <string name="blacklist_notification">Abgewiesener Anruf von %s</string>
+  <string name="blacklist_summary">Eingehende Anrufe von Nummern, die sich in der Sperrliste befinden, werden abgewiesen</string>
+  <string name="blacklist_notification">Anruf von %s abgewiesen</string>
   <string name="blacklist_notification_private_number">Abgewiesener Anruf einer unterdrückten Nummer</string>
   <string name="blacklist_notification_list_private">Unterdrückt</string>
   <string name="blacklist_notification_unknown_number">Unbekannte Nummer abgewiesen %s</string>
@@ -55,6 +55,8 @@
   <string name="bg_incall_as_heads_up_summary">Benachrichtigung im Hintergrund für eingehenden Anruf als Heads-Up anzeigen.</string>
   <string name="glow_bg_trans">Wählfeld-Transparenz</string>
   <string name="glow_bg_trans_summary">Macht den eingehenden Anruf-Dialog transparent, so dass das gesamte Kontaktbild sichtbar ist.</string>
+  <string name="mwi_notification_title">Anklopfsignal-Anzeiger</string>
+  <string name="mwi_notification_summary">Eine Anzeige für \"Anklopfen\"-Benachrichtigungen einblenden</string>
   <string name="perm_change_mobile_network">Netzwerkmodus (2G/3G) ändern</string>
   <string name="perm_change_mobile_network_desc">Erlaubt einer App, zu jeder Zeit zwischen 2G und 3G zu wechseln. 3G ist schneller, aber verbraucht mehr Akku und verursacht eventuell Zusatzkosten.</string>
   <string name="prox_auto_speaker_title">Lautsprecher-Entfernungsautomatik</string>
