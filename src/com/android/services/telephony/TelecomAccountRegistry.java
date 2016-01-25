@@ -443,7 +443,7 @@ final class TelecomAccountRegistry {
         // IExtTelephony.getCurrentUiccCardProvisioningStatus()can return
         final int PROVISIONED = 1;
         final int INVALID_STATE = -1;
-
+        int primaryStackId = 0;
         IExtTelephony mExtTelephony =
             IExtTelephony.Stub.asInterface(ServiceManager.getService("extphone"));
 
@@ -482,13 +482,18 @@ final class TelecomAccountRegistry {
                 mAccounts.add(new AccountEntry(phone, false /* emergency */, false /* isDummy */));
             }
         }
-
+        try {
+                //get primary stack phone id.
+                primaryStackId = mExtTelephony.getPrimaryStackPhoneId();
+            } catch (RemoteException ex) {
+                Log.w(this, "Failed to get primary stack id");
+            }
         // If we did not list ANY accounts, we need to provide a "default" SIM account
         // for emergency numbers since no actual SIM is needed for dialing emergency
         // numbers but a phone account is.
         if (mAccounts.isEmpty()) {
-            mAccounts.add(new AccountEntry(PhoneFactory.getDefaultPhone(), true /* emergency */,
-                    false /* isDummy */));
+            mAccounts.add(new AccountEntry(PhoneFactory.getPhone(primaryStackId), true
+                    /* emergency */, false /* isDummy */));
         }
 
         // Add a fake account entry.
