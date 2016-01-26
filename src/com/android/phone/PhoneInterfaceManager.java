@@ -507,8 +507,8 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
                         }
                     } else {
                         onCompleted = obtainMessage(EVENT_OPEN_CHANNEL_DONE, request);
-                        //uiccCard.iccOpenLogicalChannel(openChannelArgs.first,
-                        //    openChannelArgs.second, onCompleted);
+                        uiccCard.iccOpenLogicalChannel(openChannelArgs.first,
+                            openChannelArgs.second, onCompleted);
                 }
                 break;
 
@@ -2089,7 +2089,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         return iccOpenLogicalChannelUsingSubId(getDefaultSubscription(), AID);
     }
 
-    //@Override
+    @Override
     public IccOpenLogicalChannelResponse iccOpenLogicalChannelWithP2(String AID, byte p2) {
        return iccOpenLogicalChannelUsingSubIdWithP2(getDefaultSubscription(), AID, p2);
     }
@@ -2105,7 +2105,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         return response;
     }
 
-    //@Override
+    @Override
     public IccOpenLogicalChannelResponse iccOpenLogicalChannelUsingSubIdWithP2(int subId,
             String AID, byte p2) {
         enforceModifyPermissionOrCarrierPrivilege(getPhone(subId));
