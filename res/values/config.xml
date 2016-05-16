@@ -249,4 +249,6 @@
     <!-- Whether the emergency only account can make emergency calls -->
     <bool name="config_pstnCanPlaceEmergencyCalls">true</bool>
 
+    <!-- Disable speaker proximity preference for problematic devices -->
+    <bool name="config_enabled_speakerprox" translatable="false">true</bool>
 </resources>
