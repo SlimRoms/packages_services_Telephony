@@ -246,4 +246,7 @@
 
     <!-- Flag indicating whether to allow limit video confernece call max supported -->
     <bool name="config_enable_video_conference_call_limit">false</bool>
+
+    <!-- Disable speaker proximity preference for problematic devices -->
+    <bool name="config_enabled_speakerprox" translatable="false">true</bool>
 </resources>
