@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">הגדרות רמקול קרבה</string>
+  <string name="prox_auto_speaker_title">רמקול קרבה אוטומטי</string>
+  <string name="prox_auto_speaker_summary">הפעל רמקול שהמכשיר מורחק מהאוזן</string>
+  <string name="prox_auto_speaker_delay_title">השהיית רמקול קרבה</string>
+  <string name="prox_auto_speaker_delay_summary">השהיית זמן לפני שהרמקול מופעל</string>
+  <string name="prox_auto_speaker_incall_only_title">רק בזמן שיחה</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">בזמן שיחות יוצאות, המזאין יפעל רק לאחר שהמשיב יענה</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">המאזין יפעל במהלך כל מצבי שיחה פעילה (בררת מחדל)</string>
 </resources>

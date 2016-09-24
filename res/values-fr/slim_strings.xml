@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">Paramètres du haut-parleur de proximité</string>
+  <string name="prox_auto_speaker_title">Haut-parleur de proximité automatique</string>
+  <string name="prox_auto_speaker_summary">Activer le haut-parleur quand l\'appareil n\'est plus à proximité de vos oreilles</string>
+  <string name="prox_auto_speaker_delay_title">Délai de proximité du haut-parleur</string>
+  <string name="prox_auto_speaker_delay_summary">Délai avant que le haut-parleur ne soit actif</string>
+  <string name="prox_auto_speaker_incall_only_title">Seulement pendant l\'appel</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">Lors des appels sortants, le haut-parleur s\'active après réponse du correspondant</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">Le haut-parleur s\'active pour tous les états de l\'appel (Par défaut)</string>
 </resources>

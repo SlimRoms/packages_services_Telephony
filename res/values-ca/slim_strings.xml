@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">Configuració dels altaveus de proximitat</string>
+  <string name="prox_auto_speaker_title">Altaveu de proximitat automàtic</string>
+  <string name="prox_auto_speaker_summary">Habilitar l\'altaveu quan el dispositiu es separa de la teva cara</string>
+  <string name="prox_auto_speaker_delay_title">Retard del sensor de Proximitat</string>
+  <string name="prox_auto_speaker_delay_summary">Temps d\'espera fins activar l\'altaveu</string>
+  <string name="prox_auto_speaker_incall_only_title">Només estant en una trucada</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">En trucades sortints, l\'altaveu només s\'activarà quan l\'altra persona contesti</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">L\'altaveu està actiu en qualsevol estat de la trucada (per defecte)</string>
 </resources>
