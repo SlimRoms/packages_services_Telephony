@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">Impostazioni vivavoce</string>
+  <string name="prox_auto_speaker_title">Vivavoce automatico</string>
+  <string name="prox_auto_speaker_summary">Attiva il vivavoce se il dispositivo viene allontanato dal volto</string>
+  <string name="prox_auto_speaker_delay_title">Ritardo vivavoce</string>
+  <string name="prox_auto_speaker_delay_summary">Tempo di ritardo prima di attivare il vivavoce</string>
+  <string name="prox_auto_speaker_incall_only_title">Solo in chiamata</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">Nelle chiamate in uscita, il vivavoce si attiverà dopo la risposta</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">Il vivavoce sarà attivato per tutte le chiamate (predefinito)</string>
 </resources>
