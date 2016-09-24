@@ -16,12 +16,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
-  <string name="display_category_prox_auto_speaker_title">擴音器設定</string>
-  <string name="prox_auto_speaker_title">自動擴音</string>
-  <string name="prox_auto_speaker_summary">裝置遠離臉部時自動啟用擴音</string>
-  <string name="prox_auto_speaker_delay_title">自動擴音延遲</string>
-  <string name="prox_auto_speaker_delay_summary">啟用擴音前的延遲時間</string>
-  <string name="prox_auto_speaker_incall_only_title">僅通話時</string>
-  <string name="prox_auto_speaker_incall_only_summary_on">僅在電話接通時啟用麥克風</string>
-  <string name="prox_auto_speaker_incall_only_summary_off">持續啟用麥克風 (預設)</string>
 </resources>

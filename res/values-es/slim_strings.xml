@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">Configuración de proximidad de altavoz</string>
+  <string name="prox_auto_speaker_title">Altavoz de proximidad automático</string>
+  <string name="prox_auto_speaker_summary">Activar el altavoz cuando se separa el dispositivo de la cara</string>
+  <string name="prox_auto_speaker_delay_title">Retardo del altavoz de proximidad</string>
+  <string name="prox_auto_speaker_delay_summary">Tiempo de espera hasta activar altavoz</string>
+  <string name="prox_auto_speaker_incall_only_title">Solo durante una llamada</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">En llamadas salientes, el altavoz solo se activará cuando la otra persona conteste</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">El altavoz estará activo durante cualquier estado de la llamada (predeterminado)</string>
 </resources>
