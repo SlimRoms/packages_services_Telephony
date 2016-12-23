@@ -80,4 +80,16 @@
             android:targetClass="com.qualcomm.qti.ims.ImsSettings"/>
     </PreferenceScreen>
 
+    <PreferenceCategory
+            android:key="category_prox_auto_speaker"
+            android:title="@string/display_category_prox_auto_speaker_title" >
+
+            <PreferenceScreen
+                android:fragment="com.android.settings.ProxAutoSpeakerFragment"
+                android:key="prox_auto_speaker_options"
+                android:title="@string/prox_auto_speaker_title"
+                android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
