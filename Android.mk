@@ -14,6 +14,8 @@ LOCAL_JAVA_LIBRARIES := \
         voip-common \
         ims-common \
         org.apache.http.legacy
+        telephony-ext \
+        org.slim.framework
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
         android-support-v7-appcompat \
@@ -21,7 +23,14 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
         android-support-v7-recyclerview \
         android-support-v14-preference \
         guava \
-        volley
+        volley \
+        ims-ext-common \
+        android-support-v7-preference \
+        android-support-v14-preference \
+        slim-preference
+
+# Include Slim's frameworks
+LOCAL_JAVA_LIBRARIES += org.slim.framework
 
 LOCAL_SRC_FILES := $(call all-java-files-under, $(src_dirs))
 LOCAL_SRC_FILES += \
