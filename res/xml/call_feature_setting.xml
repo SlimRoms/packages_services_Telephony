@@ -80,4 +80,12 @@
             android:targetClass="com.qualcomm.qti.ims.ImsSettings"/>
     </PreferenceScreen>
 
+    <PreferenceScreen
+        android:key="@org.slim.framework:string/prox_auto_speaker_options"
+        android:title="@org.slim.framework:string/display_category_prox_auto_speaker_title">
+        <intent android:action="com.slim.settings.action.PROXIMITY_AUTO_SPEAKER_SETTINGS"
+            android:targetPackage="com.slim.settings"
+            android:targetClass="com.slim.settings.activities.ProxAutoSpeakerActivity"/>
+    </PreferenceScreen>
+
 </PreferenceScreen>
