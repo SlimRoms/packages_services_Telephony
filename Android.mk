@@ -9,12 +9,21 @@ phone_common_dir := ../../apps/PhoneCommon
 src_dirs := src $(phone_common_dir)/src sip/src
 res_dirs := res $(phone_common_dir)/res sip/res
 
-LOCAL_JAVA_LIBRARIES := telephony-common voip-common ims-common telephony-ext
+LOCAL_JAVA_LIBRARIES := \
+        telephony-common \
+        voip-common \
+        ims-common \
+        telephony-ext \
+        org.slim.framework
+
 LOCAL_STATIC_JAVA_LIBRARIES := \
         org.apache.http.legacy \
         guava \
         volley \
-        ims-ext-common
+        ims-ext-common \
+        android-support-v7-preference \
+        android-support-v14-preference \
+        slim-preference
 
 # Include Slim's frameworks
 LOCAL_JAVA_LIBRARIES += org.slim.framework
