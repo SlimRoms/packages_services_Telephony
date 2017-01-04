@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aade967_f7c35f88",
+        "filename": "res/values/slim_strings.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000043
+      },
+      "writtenOn": "2017-01-04T14:13:39Z",
+      "side": 1,
+      "message": "Don\u0027t do this, all the strings here where from CM, we haven\u0027t changed it. Even if we did, proper thing would have been to add our licensing to CM\u0027s",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 45
+      },
+      "revId": "ca8fad1e3f75892c0ad6b0e5644acd8482bbc8c4",
+      "serverId": "f8201d64-d729-4630-b91d-5f8be02869f0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aade967_17c15b80",
+        "filename": "res/values/slim_strings.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000043
+      },
+      "writtenOn": "2017-01-04T14:13:39Z",
+      "side": 1,
+      "message": "kill it with fire",
+      "revId": "ca8fad1e3f75892c0ad6b0e5644acd8482bbc8c4",
+      "serverId": "f8201d64-d729-4630-b91d-5f8be02869f0",
+      "unresolved": false
+    }
+  ]
+}
