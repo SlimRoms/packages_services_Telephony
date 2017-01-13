@@ -16,4 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Proximity speaker -->
+  <string name="display_category_prox_auto_speaker_title">Nastavení automatického hlasitého reproduktoru</string>
+  <string name="prox_auto_speaker_title">Automatický hlasitý reproduktor</string>
+  <string name="prox_auto_speaker_summary">Zapnout hlasitý odposlech v případě, že je zařízení odloženo od hlavy</string>
+  <string name="prox_auto_speaker_delay_title">Prodleva automatického hlasitého reproduktoru</string>
+  <string name="prox_auto_speaker_delay_summary">Prodleva před aktivací automatického hlasitého reproduktoru</string>
+  <string name="prox_auto_speaker_incall_only_title">Pouze při hovoru</string>
+  <string name="prox_auto_speaker_incall_only_summary_on">Při odchozích hovorech se reproduktor aktivuje při přijmutí hovoru protistranou</string>
+  <string name="prox_auto_speaker_incall_only_summary_off">Reproduktor bude aktivní vždy, i při vyzvánění (výchozí)</string>
 </resources>
