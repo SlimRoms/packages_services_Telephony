@@ -16,13 +16,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Advanced Settings -->
+  <string name="incall_screen_settings">Scherminstellingen tijdens gesprek</string>
+  <string name="show_ssn_label">Gebeurtenismelding</string>
+  <string name="show_ssn_summary">Melding weergeven voor verschillende netwerkgebeurtenissen met betrekking tot gespreksomgang</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
+  <string name="call_notif_unconditionalCF">Onvoorwaardelijk doorschakelen actief</string>
   <!-- Toast text for Conditional Call Forwarding enabled  -->
+  <string name="call_notif_conditionalCF">Voorwaardelijk doorschakelen actief</string>
   <!-- Toast text for a forwarded MO call  -->
+  <string name="call_notif_MOcall_forwarding">Uitgaande oproep wordt doorgeschakeld</string>
   <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+  <string name="call_notif_cugcall">Oproep binnen besloten gebruikersgroep</string>
   <!-- In-call screen: status label when MO calls are barred -->
+  <string name="call_notif_outgoing_barred">Uitgaande oproepen geblokkeerd</string>
   <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+  <string name="call_notif_incoming_barred">Inkomende oproepen geblokkeerd door externe partij</string>
   <!-- Toast text for MO calls when CLIR Suppression is rejected -->
   <!-- In-call screen: status label when MO call gets deflected to another party -->
   <!-- Toast text for incoming call being forwarded to other remote party  -->
