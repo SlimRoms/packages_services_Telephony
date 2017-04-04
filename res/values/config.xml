@@ -246,4 +246,7 @@
 
     <!-- Flag indicating whether to allow limit video confernece call max supported -->
     <bool name="config_enable_video_conference_call_limit">false</bool>
+
+    <!-- Whether the cellular radio is allowed to be power down when the Bluetooth can provide the data/call capabilities -->
+    <bool name="config_allowRadioPowerDownOnBluetooth">false</bool>
 </resources>
