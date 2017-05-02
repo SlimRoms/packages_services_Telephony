@@ -83,9 +83,7 @@
     <PreferenceScreen
         android:key="@slim:string/prox_auto_speaker_options"
         android:title="@slim:string/display_category_prox_auto_speaker_title">
-        <intent android:action="com.slim.settings.action.PROXIMITY_AUTO_SPEAKER_SETTINGS"
-            android:targetPackage="com.slim.settings"
-            android:targetClass="com.slim.settings.activities.ProxAutoSpeakerActivity"/>
+        <intent android:action="com.slim.settings.action.PROXIMITY_AUTO_SPEAKER_SETTINGS"/>
     </PreferenceScreen>
 
 </PreferenceScreen>
