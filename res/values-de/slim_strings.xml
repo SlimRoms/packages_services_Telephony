@@ -16,20 +16,56 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Advanced Settings -->
+  <string name="show_ssn_label">Ereignisbenachrichtigung</string>
+  <string name="show_ssn_summary">Benachrichtigung für verschiedene, mit Telefonie zusammenhängende Netzwerkereignisse anzeigen</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
+  <string name="call_notif_unconditionalCF">Sofortige Rufweiterleitung aktiviert</string>
   <!-- Toast text for Conditional Call Forwarding enabled  -->
+  <string name="call_notif_conditionalCF">Bedingte Rufweiterleitung aktiviert</string>
   <!-- Toast text for a forwarded MO call  -->
+  <string name="call_notif_MOcall_forwarding">Ausgehender Anruf wird weitergeleitet</string>
   <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+  <string name="call_notif_cugcall">Anruf in geschlossener Benutzergruppe</string>
   <!-- In-call screen: status label when MO calls are barred -->
+  <string name="call_notif_outgoing_barred">Ausgehende Anrufe gesperrt</string>
   <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+  <string name="call_notif_incoming_barred">Eingehende Anrufe bei anderem Teilnehmer gesperrt</string>
   <!-- Toast text for MO calls when CLIR Suppression is rejected -->
   <!-- In-call screen: status label when MO call gets deflected to another party -->
+  <string name="call_notif_call_deflected">Anruf wird von der Gegenseite weitergeleitet</string>
   <!-- Toast text for incoming call being forwarded to other remote party  -->
+  <string name="call_notif_MTcall_forwarding">Eingehender Anruf wird weitergeleitet</string>
   <!-- Toast text for incoming call which is part of MultiParty Call -->
+  <string name="call_notif_multipartycall">Telefonkonferenz</string>
   <!-- Toast text for incoming call which is answered,put on hold & then released -->
   <!-- Toast text for incoming call forward check received -->
+  <string name="call_notif_forwardcheckreceived">Anruf wurde weitergeleitet</string>
   <!-- Toast text for incoming call connecting through ECT -->
   <!-- Toast text for incoming call connected through ECT -->
   <!-- Mobile network settings, preferred network modes -->
+  <string name="preferred_network_mode_td_scdma_lte_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/LTE/GSM/WCDMA/CDMA/EvDo</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/GSM/WCDMA/CDMA/EvDo</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_lte_choice">TD-SCDMA/GSM/WCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_wcdma_lte_choice">TD-SCDMA/WCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_choice">TD-SCDMA/GSM/WCDMA</string>
+  <string name="preferred_network_mode_td_scdma_gsm_lte_choice">TD-SCDMA/GSM/LTE</string>
+  <string name="preferred_network_mode_td_scdma_gsm_choice">TD-SCDMA/GSM</string>
+  <string name="preferred_network_mode_td_scdma_lte_choice">TD-SCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_wcdma_choice">TD-SCDMA/WCDMA</string>
+  <string name="preferred_network_mode_td_scdma_only_choice">nur TD-SCDMA</string>
+  <string name="preferred_network_mode_lte_wcdma_choice">LTE / WCDMA</string>
+  <string name="preferred_network_mode_lte_choice">LTE</string>
+  <string name="preferred_network_mode_global_choice">Global</string>
+  <string name="preferred_network_mode_gsm_wcdma_lte_choice">GSM/WCDMA/LTE</string>
+  <string name="preferred_network_mode_cdma_lte_evdo_choice">CDMA + LTE/EvDo</string>
+  <string name="preferred_network_mode_cdma_evdo_gsm_wcdma_choice">CDMA/EvDo/GSM/WCDMA</string>
+  <string name="preferred_network_mode_evdo_only_choice">nur EvDo</string>
+  <string name="preferred_network_mode_cdma_wo_evdo_choice">CDMA ohne EvDo</string>
+  <string name="preferred_network_mode_cdma_evdo_auto_choice">CDMA/EvDo (automatisch)</string>
+  <string name="preferred_network_mode_gsm_wcdma_auto_choice">GSM/WCDMA (automatisch)</string>
+  <string name="preferred_network_mode_wcdma_only_choice">nur WCDMA</string>
+  <string name="preferred_network_mode_gsm_only_choice">nur GSM</string>
+  <string name="preferred_network_mode_gsm_wcdma_preferred_choice">GSM/WCDMA bevorzugt</string>
+  <string name="msim_mobile_network_settings_title">SIM %d Mobilfunknetz-Einstellungen</string>
 </resources>

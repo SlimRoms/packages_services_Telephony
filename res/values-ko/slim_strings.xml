@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Advanced Settings -->
+  <string name="show_ssn_label">이벤트 알림</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <!-- Toast text for Conditional Call Forwarding enabled  -->
@@ -27,9 +28,38 @@
   <!-- In-call screen: status label when MO call gets deflected to another party -->
   <!-- Toast text for incoming call being forwarded to other remote party  -->
   <!-- Toast text for incoming call which is part of MultiParty Call -->
+  <string name="call_notif_multipartycall">다자간 통화</string>
   <!-- Toast text for incoming call which is answered,put on hold & then released -->
+  <string name="call_notif_callonhold_released">원격으로 전화 연결이 해제되었습니다</string>
   <!-- Toast text for incoming call forward check received -->
+  <string name="call_notif_forwardcheckreceived">착신 전환됨</string>
   <!-- Toast text for incoming call connecting through ECT -->
+  <string name="call_notif_callconnectingect">명시적 전화 전달 서비스를 통한 전화 연결 중</string>
   <!-- Toast text for incoming call connected through ECT -->
+  <string name="call_notif_callconnectedect">명시적 전화 전달 서비스를 통한 전화 연결됨</string>
   <!-- Mobile network settings, preferred network modes -->
+  <string name="preferred_network_mode_td_scdma_lte_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/LTE/GSM/WCDMA/CDMA/EvDo</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/GSM/WCDMA/CDMA/EvDo</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_lte_choice">TD-SCDMA/GSM/WCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_wcdma_lte_choice">TD-SCDMA/WCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_gsm_wcdma_choice">TD-SCDMA/GSM/WCDMA</string>
+  <string name="preferred_network_mode_td_scdma_gsm_lte_choice">TD-SCDMA/GSM/LTE</string>
+  <string name="preferred_network_mode_td_scdma_gsm_choice">TD-SCDMA/GSM</string>
+  <string name="preferred_network_mode_td_scdma_lte_choice">TD-SCDMA/LTE</string>
+  <string name="preferred_network_mode_td_scdma_wcdma_choice">TD-SCDMA/WCDMA</string>
+  <string name="preferred_network_mode_td_scdma_only_choice">TD-SCDMA 전용</string>
+  <string name="preferred_network_mode_lte_wcdma_choice">LTE / WCDMA</string>
+  <string name="preferred_network_mode_lte_choice">LTE</string>
+  <string name="preferred_network_mode_global_choice">글로벌</string>
+  <string name="preferred_network_mode_gsm_wcdma_lte_choice">GSM/WCDMA/LTE</string>
+  <string name="preferred_network_mode_cdma_lte_evdo_choice">CDMA + LTE/EvDo</string>
+  <string name="preferred_network_mode_cdma_evdo_gsm_wcdma_choice">CDMA/EvDo/GSM/WCDMA</string>
+  <string name="preferred_network_mode_evdo_only_choice">EvDo 전용</string>
+  <string name="preferred_network_mode_cdma_wo_evdo_choice">CDMA(EvDo 없음)</string>
+  <string name="preferred_network_mode_cdma_evdo_auto_choice">CDMA/EvDo 자동</string>
+  <string name="preferred_network_mode_gsm_wcdma_auto_choice">GSM/WCDMA 자동</string>
+  <string name="preferred_network_mode_wcdma_only_choice">WCDMA 전용</string>
+  <string name="preferred_network_mode_gsm_only_choice">GSM 전용</string>
+  <string name="preferred_network_mode_gsm_wcdma_preferred_choice">GSM/WCDMA 우선</string>
+  <string name="msim_mobile_network_settings_title">SIM %d 모바일 네트워크 설정</string>
 </resources>

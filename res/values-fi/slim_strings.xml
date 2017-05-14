@@ -66,4 +66,11 @@
   <string name="preferred_network_mode_cdma_lte_evdo_choice">CDMA + LTE/EvDo</string>
   <string name="preferred_network_mode_cdma_evdo_gsm_wcdma_choice">CDMA/EvDo/GSM/WCDMA</string>
   <string name="preferred_network_mode_evdo_only_choice">Vain EvDo</string>
+  <string name="preferred_network_mode_cdma_wo_evdo_choice">CDMA ilman EvDoa</string>
+  <string name="preferred_network_mode_cdma_evdo_auto_choice">Autom. CDMA/EvDo</string>
+  <string name="preferred_network_mode_gsm_wcdma_auto_choice">Autom. GSM/WCDMA</string>
+  <string name="preferred_network_mode_wcdma_only_choice">Vain WCDMA</string>
+  <string name="preferred_network_mode_gsm_only_choice">Vain GSM</string>
+  <string name="preferred_network_mode_gsm_wcdma_preferred_choice">Suosi GSM/WCDMA</string>
+  <string name="msim_mobile_network_settings_title">SIM %d mobiiliverkon asetukset</string>
 </resources>
