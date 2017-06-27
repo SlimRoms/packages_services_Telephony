@@ -37,7 +37,7 @@
   <!-- In-call screen: status label when MO call gets deflected to another party -->
   <string name="call_notif_call_deflected">Chamada encaminhada pela parte remota</string>
   <!-- Toast text for incoming call being forwarded to other remote party  -->
-  <string name="call_notif_MTcall_forwarding">A chamada recebida é encaminhada</string>
+  <string name="call_notif_MTcall_forwarding">A chamada recebida foi encaminhada</string>
   <!-- Toast text for incoming call which is part of MultiParty Call -->
   <string name="call_notif_multipartycall">Chamada em grupo</string>
   <!-- Toast text for incoming call which is answered,put on hold & then released -->
@@ -71,6 +71,6 @@
   <string name="preferred_network_mode_gsm_wcdma_auto_choice">GSM/WCDMA automático</string>
   <string name="preferred_network_mode_wcdma_only_choice">Somente WCDMA</string>
   <string name="preferred_network_mode_gsm_only_choice">Somente GSM</string>
-  <string name="preferred_network_mode_gsm_wcdma_preferred_choice">GSM/WCDMA preferido</string>
+  <string name="preferred_network_mode_gsm_wcdma_preferred_choice">GSM/WCDMA preferencialmente</string>
   <string name="msim_mobile_network_settings_title">Configurações de rede móvel SIM %d</string>
 </resources>
