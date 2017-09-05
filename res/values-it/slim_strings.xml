@@ -23,7 +23,7 @@
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Attivata deviazione incondizionata della chiamata</string>
   <!-- Toast text for Conditional Call Forwarding enabled  -->
-  <string name="call_notif_conditionalCF">Attivata deviazione condizionale della chiamata</string>
+  <string name="call_notif_conditionalCF">Attivata deviazione condizionata della chiamata</string>
   <!-- Toast text for a forwarded MO call  -->
   <string name="call_notif_MOcall_forwarding">La chiamata in uscita è deviata</string>
   <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
