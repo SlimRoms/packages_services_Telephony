@@ -18,7 +18,7 @@
   <!-- Advanced Settings -->
   <string name="incall_screen_settings">Nustatymai skambinimo metu</string>
   <string name="show_ssn_label">Įvykių įspėjimas</string>
-  <string name="show_ssn_summary">Rodyti pranešimą apie įvairių tinklo įvykius, susijusius su skambučių valdymas</string>
+  <string name="show_ssn_summary">Rodyti įspėjimą dėl įvairių tinklo įvykių susijusių su skambučių tvarkymu</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Besąlygiškas skambučių peradresavimas aktyvus</string>
@@ -35,17 +35,17 @@
   <!-- Toast text for MO calls when CLIR Suppression is rejected -->
   <string name="call_notif_clir_suppression_rejected">Mano numerio slėpimas buvo atmestas tinklo</string>
   <!-- In-call screen: status label when MO call gets deflected to another party -->
-  <string name="call_notif_call_deflected">Skambutis peradresuojamas nuotolinėje vietoje</string>
+  <string name="call_notif_call_deflected">Skambutis peradresuojamas nuotolinėje šalyje</string>
   <!-- Toast text for incoming call being forwarded to other remote party  -->
   <string name="call_notif_MTcall_forwarding">Įeinantis skambutis peradresuojamas</string>
   <!-- Toast text for incoming call which is part of MultiParty Call -->
   <string name="call_notif_multipartycall">Konferencinis skambutis</string>
   <!-- Toast text for incoming call which is answered,put on hold & then released -->
-  <string name="call_notif_callonhold_released">Skambučių, išleisti nuotoliniu būdu</string>
+  <string name="call_notif_callonhold_released">Skambučio sulaikymas nutrauktas</string>
   <!-- Toast text for incoming call forward check received -->
   <string name="call_notif_forwardcheckreceived">Skambutis buvo peradresuotas</string>
   <!-- Toast text for incoming call connecting through ECT -->
-  <string name="call_notif_callconnectingect">Prisijungta prie tiesioginio ryšio</string>
+  <string name="call_notif_callconnectingect">Jungiamasi prie tiesioginio ryšio</string>
   <!-- Toast text for incoming call connected through ECT -->
   <string name="call_notif_callconnectedect">Prisijungta prie tiesioginio ryšio</string>
   <!-- Mobile network settings, preferred network modes -->
