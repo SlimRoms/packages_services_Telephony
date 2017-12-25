@@ -33,6 +33,7 @@
   <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
   <string name="call_notif_incoming_barred">Eingehende Anrufe bei anderem Teilnehmer gesperrt</string>
   <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+  <string name="call_notif_clir_suppression_rejected">Rufnummernunterdrückung vom Netz zurückgewiesen</string>
   <!-- In-call screen: status label when MO call gets deflected to another party -->
   <string name="call_notif_call_deflected">Anruf wird von der Gegenseite weitergeleitet</string>
   <!-- Toast text for incoming call being forwarded to other remote party  -->
@@ -40,10 +41,13 @@
   <!-- Toast text for incoming call which is part of MultiParty Call -->
   <string name="call_notif_multipartycall">Telefonkonferenz</string>
   <!-- Toast text for incoming call which is answered,put on hold & then released -->
+  <string name="call_notif_callonhold_released">Anruf aus der Ferne ausgelöst</string>
   <!-- Toast text for incoming call forward check received -->
   <string name="call_notif_forwardcheckreceived">Anruf wurde weitergeleitet</string>
   <!-- Toast text for incoming call connecting through ECT -->
+  <string name="call_notif_callconnectingect">eingehender Anruf über Amt vermittelt (ECT)</string>
   <!-- Toast text for incoming call connected through ECT -->
+  <string name="call_notif_callconnectedect">verbundener Anruf über Amt vermittelt (ECT)</string>
   <!-- Mobile network settings, preferred network modes -->
   <string name="preferred_network_mode_td_scdma_lte_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/LTE/GSM/WCDMA/CDMA/EvDo</string>
   <string name="preferred_network_mode_td_scdma_gsm_wcdma_cdma_evdo_choice">TD-SCDMA/GSM/WCDMA/CDMA/EvDo</string>
